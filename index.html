@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Igor Ristrutturazioni - Servizi professionali di ristrutturazione, pittura e rinnovazione interni a Treviso e provincia. Qualità garantita.">
+    <title>Igor Ristrutturazioni | Rinnovazione Interni Treviso</title>
+
+    <!-- Google Fonts - Poppins (simile a Made Tommy) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome per icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-hammer"></i></span>
+                <span class="logo-text">Igor<span>Ristrutturazioni</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
+                <li><a href="#servizi" class="nav-link">Servizi</a></li>
+                <li><a href="#perche-noi" class="nav-link">Perché Noi</a></li>
+                <li><a href="#recensioni" class="nav-link">Recensioni</a></li>
+                <li><a href="#contatti" class="nav-link">Contatti</a></li>
+            </ul>
+            <a href="tel:+393331234567" class="nav-cta">
+                <i class="fas fa-phone"></i>
+                <span>Chiamaci</span>
+            </a>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Trasformiamo la Tua Casa <br><span class="gradient-text">nel Cuore di Treviso</span></h1>
+            <p class="hero-description">Ristrutturazioni, pittura e rinnovazione interni con passione artigianale e qualità garantita. Ogni progetto è unico, proprio come la tua casa.</p>
+            <div class="hero-buttons">
+                <a href="#contatti" class="btn btn-primary">
+                    <span>Richiedi Preventivo</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#servizi" class="btn btn-secondary">
+                    <span>Scopri i Servizi</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="15">0</span>
+                    <span class="stat-label">Anni di Esperienza</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="100">0</span>
+                    <span class="stat-label">% Clienti Soddisfatti</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#chi-siamo">
+                <span>Scorri</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Chi Siamo Section -->
+    <section id="chi-siamo" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600" alt="Igor e il suo team al lavoro">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400" alt="Lavori di ristrutturazione">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">15+</span>
+                        <span class="exp-text">Anni di<br>Esperienza</span>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+                    <span class="section-subtitle">Chi Siamo</span>
+                    <h2 class="section-title">La Passione per il <span class="highlight">Lavoro Ben Fatto</span></h2>
+                    <p class="about-text">
+                        Ciao, sono <strong>Igor</strong>, e da oltre 15 anni mi dedico con passione alla trasformazione degli spazi abitativi nella splendida provincia di Treviso. Quello che era iniziato come un piccolo sogno si è trasformato in una realtà consolidata, grazie alla fiducia di centinaia di clienti soddisfatti.
+                    </p>
+                    <p class="about-text">
+                        Il mio team è composto da <strong>artigiani qualificati</strong>, ognuno specializzato nel proprio settore: dalla pittura alla muratura, dall'impiantistica alla falegnameria. Crediamo che ogni casa abbia una storia da raccontare, e il nostro compito è renderla ancora più bella.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Qualità Certificata</h4>
+                                <p>Materiali premium e lavorazioni a regola d'arte</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Affidabilità Totale</h4>
+                                <p>Rispettiamo tempi e budget concordati</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Cura dei Dettagli</h4>
+                                <p>Ogni progetto curato come fosse casa nostra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servizi Section -->
+    <section id="servizi" class="services-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">I Nostri Servizi</span>
+                <h2 class="section-title">Soluzioni Complete per la <span class="highlight">Tua Casa</span></h2>
+                <p class="section-description">Offriamo una gamma completa di servizi per trasformare e valorizzare ogni ambiente della tua abitazione.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Servizio 1: Ristrutturazione -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600" alt="Ristrutturazione completa">
+                        <div class="service-overlay">
+                            <a href="#contatti" class="service-btn">Richiedi Info</a>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Ristrutturazione Completa</h3>
+                        <p>Trasformiamo completamente gli spazi abitativi, dalla demolizione alla consegna chiavi in mano. Coordinamento di tutti i lavori in un unico referente.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Progettazione personalizzata</li>
+                            <li><i class="fas fa-check"></i> Demolizioni e rifacimenti</li>
+                            <li><i class="fas fa-check"></i> Impianti e finiture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Servizio 2: Pittura -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600" alt="Servizi di pittura">
+                        <div class="service-overlay">
+                            <a href="#contatti" class="service-btn">Richiedi Info</a>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                        <h3>Pittura e Decorazioni</h3>
+                        <p>Dai nuova vita alle tue pareti con tecniche moderne e finiture di pregio. Colori personalizzati e trattamenti speciali per ogni ambiente.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Pitture lavabili e traspiranti</li>
+                            <li><i class="fas fa-check"></i> Effetti decorativi</li>
+                            <li><i class="fas fa-check"></i> Velature e stucchi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Servizio 3: Rinnovazione -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600" alt="Rinnovazione interni">
+                        <div class="service-overlay">
+                            <a href="#contatti" class="service-btn">Richiedi Info</a>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Rinnovazione Interni</h3>
+                        <p>Rinnova gli ambienti senza interventi invasivi. Cambia pavimenti, rivestimenti e arredi fissi per un look completamente nuovo.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Pavimenti e rivestimenti</li>
+                            <li><i class="fas fa-check"></i> Porte e infissi</li>
+                            <li><i class="fas fa-check"></i> Illuminazione LED</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Servizio 4: Bagni e Cucine -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600" alt="Ristrutturazione bagni">
+                        <div class="service-overlay">
+                            <a href="#contatti" class="service-btn">Richiedi Info</a>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-bath"></i>
+                        </div>
+                        <h3>Bagni e Cucine</h3>
+                        <p>Specializzati nella ristrutturazione di bagni e cucine, gli ambienti più importanti della casa. Design moderno e funzionalità.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Rifacimento completo</li>
+                            <li><i class="fas fa-check"></i> Impianti idraulici</li>
+                            <li><i class="fas fa-check"></i> Piastrellature di design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perché Noi Section -->
+    <section id="perche-noi" class="why-us-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Perché Sceglierci</span>
+                <h2 class="section-title">La Qualità che <span class="highlight">Fa la Differenza</span></h2>
+                <p class="section-description">Non promettiamo, dimostriamo. Ecco cosa ci rende diversi dalla concorrenza.</p>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="why-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Preventivi Trasparenti</h3>
+                    <p>Nessuna sorpresa a fine lavori. Preventivi dettagliati e prezzi chiari fin dall'inizio del progetto.</p>
+                </div>
+
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="why-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Puntualità Garantita</h3>
+                    <p>Rispettiamo le tempistiche concordate. Il tuo tempo è prezioso e noi lo sappiamo bene.</p>
+                </div>
+
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="why-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garanzia sui Lavori</h3>
+                    <p>Tutti i nostri lavori sono garantiti. Siamo sicuri della qualità che offriamo.</p>
+                </div>
+
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="why-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Comunicazione Costante</h3>
+                    <p>Ti teniamo sempre aggiornato sull'avanzamento dei lavori. Siamo sempre raggiungibili.</p>
+                </div>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="process-section" data-aos="fade-up">
+                <h3 class="process-title">Il Nostro Processo</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <h4>Sopralluogo</h4>
+                        <p>Visitiamo gratuitamente la tua casa per valutare i lavori</p>
+                    </div>
+                    <div class="process-line"></div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <h4>Preventivo</h4>
+                        <p>Ti consegniamo un preventivo dettagliato entro 48h</p>
+                    </div>
+                    <div class="process-line"></div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <h4>Esecuzione</h4>
+                        <p>Realizziamo i lavori con precisione e puntualità</p>
+                    </div>
+                    <div class="process-line"></div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <h4>Consegna</h4>
+                        <p>Ti consegniamo la casa dei tuoi sogni, pulita e pronta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recensioni Section -->
+    <section id="recensioni" class="reviews-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Recensioni</span>
+                <h2 class="section-title">Cosa Dicono i <span class="highlight">Nostri Clienti</span></h2>
+                <p class="section-description">La soddisfazione dei nostri clienti è la nostra migliore pubblicità.</p>
+            </div>
+
+            <div class="reviews-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="reviews-track">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Abbiamo ristrutturato completamente il bagno e siamo rimasti entusiasti. Igor e il suo team sono professionisti seri, puntuali e molto attenti ai dettagli. Consigliatissimi!"</p>
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria R.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Maria R.</h4>
+                                <span>Treviso Centro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Finalmente un'impresa che rispetta i tempi! Ci hanno rifatto tutta la pittura di casa in meno di una settimana, lasciando tutto perfettamente pulito. Qualità eccellente."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Luca M.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Luca M.</h4>
+                                <span>Mogliano Veneto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Ristrutturazione completa del nostro appartamento anni '70. Risultato straordinario! Igor ci ha seguito passo passo, consigliandoci le soluzioni migliori. Super professionali."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Giulia e Marco">
+                            </div>
+                            <div class="author-info">
+                                <h4>Giulia e Marco</h4>
+                                <span>Preganziol</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"Ottimo rapporto qualità-prezzo. Hanno rinnovato la cucina dei miei genitori con grande cura e rispetto. Personale educato e lavoro impeccabile. Li richiameremo sicuramente."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Roberto F.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Roberto F.</h4>
+                                <span>Casier</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card">
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Ho fatto rifare il pavimento di tutto l'appartamento. Lavoro eccezionale, materiali di prima qualità e prezzo onesto. Igor è una persona seria e affidabile. 5 stelle meritate!"</p>
+                        <div class="review-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Anna B.">
+                            </div>
+                            <div class="author-info">
+                                <h4>Anna B.</h4>
+                                <span>Silea</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-nav">
+                <button class="review-btn prev" aria-label="Recensione precedente">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="review-btn next" aria-label="Recensione successiva">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="trust-badges" data-aos="fade-up" data-aos-delay="400">
+                <div class="trust-item">
+                    <i class="fab fa-google"></i>
+                    <div class="trust-info">
+                        <span class="trust-rating">4.9/5</span>
+                        <span class="trust-label">Google Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatti Section -->
+    <section id="contatti" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-subtitle">Contattaci</span>
+                    <h2 class="section-title">Iniziamo a <span class="highlight">Parlare del Tuo Progetto</span></h2>
+                    <p class="contact-description">Hai un progetto in mente? Contattaci per un sopralluogo gratuito e un preventivo senza impegno. Siamo a tua disposizione per qualsiasi domanda.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefono</h4>
+                                <a href="tel:+393331234567">+39 333 123 4567</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:info@igorristrutturazioni.it">info@igorristrutturazioni.it</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Zona Operativa</h4>
+                                <span>Treviso e Provincia</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Orari</h4>
+                                <span>Lun - Ven: 8:00 - 18:00<br>Sab: 8:00 - 12:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form id="contact-form" class="contact-form">
+                        <h3>Richiedi un Preventivo Gratuito</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nome e Cognome *</label>
+                                <input type="text" id="name" name="name" required placeholder="Mario Rossi">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefono *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+39 333 123 4567">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="mario.rossi@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Tipo di Servizio</label>
+                            <select id="service" name="service">
+                                <option value="">Seleziona un servizio</option>
+                                <option value="ristrutturazione">Ristrutturazione Completa</option>
+                                <option value="pittura">Pittura e Decorazioni</option>
+                                <option value="rinnovazione">Rinnovazione Interni</option>
+                                <option value="bagno">Ristrutturazione Bagno</option>
+                                <option value="cucina">Ristrutturazione Cucina</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Descrivi il tuo progetto *</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Descrivi brevemente i lavori che vorresti realizzare..."></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Accetto il trattamento dei dati personali secondo la <a href="#">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Invia Richiesta</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <span class="logo-icon"><i class="fas fa-hammer"></i></span>
+                            <span class="logo-text">Igor<span>Ristrutturazioni</span></span>
+                        </a>
+                        <p>Trasformiamo case dal 2008. Qualità, affidabilità e passione artigianale al servizio del tuo progetto.</p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Link Utili</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#chi-siamo">Chi Siamo</a></li>
+                            <li><a href="#servizi">Servizi</a></li>
+                            <li><a href="#perche-noi">Perché Noi</a></li>
+                            <li><a href="#recensioni">Recensioni</a></li>
+                            <li><a href="#contatti">Contatti</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-services">
+                        <h4>I Nostri Servizi</h4>
+                        <ul>
+                            <li><a href="#servizi">Ristrutturazione Completa</a></li>
+                            <li><a href="#servizi">Pittura e Decorazioni</a></li>
+                            <li><a href="#servizi">Rinnovazione Interni</a></li>
+                            <li><a href="#servizi">Bagni e Cucine</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contatti</h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+393331234567">+39 333 123 4567</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@igorristrutturazioni.it">info@igorristrutturazioni.it</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Treviso e Provincia</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Igor Ristrutturazioni. Tutti i diritti riservati. | P.IVA: 01234567890</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Buttons Container -->
+    <div class="sticky-buttons">
+        <!-- Back to Top Button -->
+        <button class="back-to-top" aria-label="Torna su">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+
+        <!-- Sticky Phone Button -->
+        <a href="tel:+393331234567" class="sticky-phone" aria-label="Chiamaci">
+            <i class="fas fa-phone-alt"></i>
+            <span class="phone-tooltip">Chiamaci ora!</span>
+        </a>
+    </div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
