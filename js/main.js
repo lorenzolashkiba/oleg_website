@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initActiveNavLinks();
     initCounterAnimation();
+    initPortfolioCarousel();
     initReviewsSlider();
     initContactForm();
     initBackToTop();
@@ -193,6 +194,207 @@ function initCounterAnimation() {
 
     window.addEventListener('scroll', checkCountersInView);
     checkCountersInView();
+}
+
+/* ============================================
+   Portfolio Carousel - Infinite Loop
+   ============================================ */
+function initPortfolioCarousel() {
+    const track = document.querySelector('.portfolio-track');
+    const originalSlides = document.querySelectorAll('.portfolio-slide');
+    const prevBtn = document.querySelector('.portfolio-btn.prev');
+    const nextBtn = document.querySelector('.portfolio-btn.next');
+    const dotsContainer = document.querySelector('.portfolio-dots');
+
+    if (!track || originalSlides.length === 0) return;
+
+    const totalOriginalSlides = originalSlides.length;
+    let slidesToShow = getSlidesToShow();
+    let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let currentIndex = totalOriginalSlides; // Start at first real slide (after clones)
+    let isTransitioning = false;
+
+    // Clone slides for infinite loop
+    function setupInfiniteLoop() {
+        // Remove existing clones
+        track.querySelectorAll('.portfolio-slide.clone').forEach(clone => clone.remove());
+
+        // Clone all slides and append to both ends
+        originalSlides.forEach(slide => {
+            const cloneBefore = slide.cloneNode(true);
+            const cloneAfter = slide.cloneNode(true);
+            cloneBefore.classList.add('clone');
+            cloneAfter.classList.add('clone');
+            track.insertBefore(cloneBefore, track.firstChild);
+            track.appendChild(cloneAfter);
+        });
+    }
+
+    function getSlidesToShow() {
+        if (window.innerWidth <= 480) return 1;
+        if (window.innerWidth <= 1024) return 2;
+        return 3;
+    }
+
+    function getSlideWidth() {
+        const slide = track.querySelector('.portfolio-slide');
+        if (!slide) return 0;
+        const gap = window.innerWidth <= 480 ? 15 : 25;
+        return slide.offsetWidth + gap;
+    }
+
+    function updateCarousel(animate = true) {
+        const slideWidth = getSlideWidth();
+        const offset = -currentIndex * slideWidth;
+
+        if (!animate) {
+            track.style.transition = 'none';
+        } else {
+            track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        }
+
+        track.style.transform = `translateX(${offset}px)`;
+        updateDots();
+    }
+
+    function updateDots() {
+        const dots = dotsContainer.querySelectorAll('.portfolio-dot');
+        // Calculate real index (accounting for clones at the beginning)
+        let realIndex = (currentIndex - totalOriginalSlides) % totalOriginalSlides;
+        if (realIndex < 0) realIndex += totalOriginalSlides;
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === realIndex);
+        });
+    }
+
+    // Create dots
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalOriginalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('portfolio-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Vai all'immagine ${i + 1}`);
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    function nextSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex++;
+        updateCarousel(true);
+    }
+
+    function prevSlide() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex--;
+        updateCarousel(true);
+    }
+
+    function goToSlide(index) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex = totalOriginalSlides + index;
+        updateCarousel(true);
+    }
+
+    // Handle infinite loop reset
+    track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+
+        // If we've scrolled past the clones, jump back
+        if (currentIndex >= totalOriginalSlides * 2) {
+            currentIndex = totalOriginalSlides;
+            updateCarousel(false);
+        } else if (currentIndex < totalOriginalSlides) {
+            currentIndex = totalOriginalSlides * 2 - 1;
+            updateCarousel(false);
+        }
+    });
+
+    // Event listeners
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+    // Auto-play
+    let autoPlay = setInterval(nextSlide, 4000);
+
+    // Pause on hover/touch
+    track.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    track.addEventListener('mouseleave', () => {
+        autoPlay = setInterval(nextSlide, 4000);
+    });
+
+    track.addEventListener('touchstart', () => clearInterval(autoPlay), { passive: true });
+    track.addEventListener('touchend', () => {
+        autoPlay = setInterval(nextSlide, 4000);
+    });
+
+    // Touch/drag support
+    track.addEventListener('touchstart', touchStart, { passive: true });
+    track.addEventListener('touchmove', touchMove, { passive: true });
+    track.addEventListener('touchend', touchEnd);
+
+    track.addEventListener('mousedown', touchStart);
+    track.addEventListener('mousemove', touchMove);
+    track.addEventListener('mouseup', touchEnd);
+    track.addEventListener('mouseleave', touchEnd);
+
+    function touchStart(e) {
+        if (isTransitioning) return;
+        isDragging = true;
+        startPos = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        track.style.transition = 'none';
+    }
+
+    function touchMove(e) {
+        if (!isDragging) return;
+        const currentPos = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        const diff = currentPos - startPos;
+        currentTranslate = prevTranslate + diff;
+    }
+
+    function touchEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+
+        const movedBy = currentTranslate - prevTranslate;
+        if (movedBy < -50) {
+            nextSlide();
+        } else if (movedBy > 50) {
+            prevSlide();
+        }
+
+        prevTranslate = 0;
+        currentTranslate = 0;
+    }
+
+    // Resize handler
+    window.addEventListener('resize', () => {
+        const newSlidesToShow = getSlidesToShow();
+        if (newSlidesToShow !== slidesToShow) {
+            slidesToShow = newSlidesToShow;
+            currentIndex = totalOriginalSlides;
+            updateCarousel(false);
+        }
+    });
+
+    // Initialize
+    setupInfiniteLoop();
+    createDots();
+
+    // Initial position (without animation)
+    setTimeout(() => {
+        updateCarousel(false);
+    }, 100);
 }
 
 /* ============================================
