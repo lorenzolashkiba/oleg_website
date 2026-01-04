@@ -6,10 +6,10 @@
     <meta name="description" content="Igor Ristrutturazioni - Servizi professionali di ristrutturazione, pittura e rinnovazione interni a Treviso e provincia. Qualità garantita.">
     <title>Igor Ristrutturazioni | Rinnovazione Interni Treviso</title>
 
-    <!-- Google Fonts - Poppins (simile a Made Tommy) -->
+    <!-- Google Fonts - Poppins + Playfair Display per titoli -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome per icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Skip Navigation Link per accessibilità -->
+    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
+
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader"></div>
@@ -52,6 +55,9 @@
             </button>
         </div>
     </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -673,6 +679,8 @@
         </div>
     </section>
 
+    </main><!-- End Main Content -->
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
@@ -743,6 +751,12 @@
         <button class="back-to-top" aria-label="Torna su">
             <i class="fas fa-chevron-up"></i>
         </button>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/393331234567?text=Ciao%2C%20vorrei%20informazioni%20sui%20vostri%20servizi%20di%20ristrutturazione." class="sticky-whatsapp" aria-label="Scrivici su WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Scrivici su WhatsApp!</span>
+        </a>
 
         <!-- Sticky Phone Button -->
         <a href="tel:+393331234567" class="sticky-phone" aria-label="Chiamaci">

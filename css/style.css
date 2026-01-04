@@ -44,6 +44,7 @@
 
     /* Typography */
     --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
 
     /* Spacing */
     --section-padding: 100px;
@@ -93,6 +94,27 @@ body {
     color: var(--gray-700);
     background-color: var(--white);
     overflow-x: hidden;
+}
+
+/* Skip Link per accessibilità */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    z-index: 10001;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 20px;
+    outline: 3px solid var(--secondary);
+    outline-offset: 2px;
 }
 
 /* Preloader */
@@ -169,7 +191,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--dark);
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+/* Display font per titoli principali */
+h1, h2, .section-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+h1 { font-size: clamp(2.75rem, 5vw, 4.5rem); }
 h2 { font-size: clamp(2rem, 4vw, 3rem); }
 h3 { font-size: clamp(1.5rem, 3vw, 1.75rem); }
 h4 { font-size: 1.25rem; }
@@ -270,14 +298,16 @@ h4 { font-size: 1.25rem; }
 }
 
 .btn-secondary {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     color: var(--white);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border-color: var(--white);
+    transform: translateY(-3px);
 }
 
 .btn-block {
@@ -993,7 +1023,7 @@ h4 { font-size: 1.25rem; }
 
 .why-us-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 80px;
 }
@@ -1654,6 +1684,61 @@ h4 { font-size: 1.25rem; }
 }
 
 /* ============================================
+   WhatsApp Button
+   ============================================ */
+.sticky-whatsapp {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.75rem;
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(37, 211, 102, 0.4);
+    transition: var(--transition-base);
+}
+
+.sticky-whatsapp:hover {
+    transform: scale(1.1);
+    background: #128C7E;
+    box-shadow: var(--shadow-lg), 0 0 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 75px;
+    background: #25D366;
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-base);
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #25D366;
+}
+
+.sticky-whatsapp:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ============================================
    Back to Top Button
    ============================================ */
 .back-to-top {
@@ -2047,6 +2132,29 @@ h4 { font-size: 1.25rem; }
         overflow: hidden;
         margin: 0;
         padding: 0;
+        position: relative;
+    }
+
+    /* Gradienti ai bordi per indicare contenuto swipeable */
+    .portfolio-carousel::before,
+    .portfolio-carousel::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 30px;
+        height: calc(100% - 60px);
+        pointer-events: none;
+        z-index: 5;
+    }
+
+    .portfolio-carousel::before {
+        left: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
+    }
+
+    .portfolio-carousel::after {
+        right: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
     }
 
     .portfolio-track {
@@ -2066,19 +2174,20 @@ h4 { font-size: 1.25rem; }
         max-height: 450px;
     }
 
+    /* Touch targets minimi 44px per accessibilità */
     .portfolio-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 0.85rem;
+        width: 44px;
+        height: 44px;
+        font-size: 0.9rem;
         top: 45%;
     }
 
     .portfolio-btn.prev {
-        left: 15px;
+        left: 10px;
     }
 
     .portfolio-btn.next {
-        right: 15px;
+        right: 10px;
     }
 
     .portfolio-overlay {
@@ -2306,8 +2415,15 @@ h4 { font-size: 1.25rem; }
         font-size: 1.25rem;
     }
 
-    .phone-tooltip {
+    .phone-tooltip,
+    .whatsapp-tooltip {
         display: none;
+    }
+
+    .sticky-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
 
     .back-to-top {
@@ -2327,4 +2443,32 @@ h4 { font-size: 1.25rem; }
 
 [data-aos].aos-animate {
     pointer-events: auto;
+}
+
+/* ============================================
+   Accessibility - Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .sticky-phone {
+        animation: none;
+    }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .hero {
+        background-attachment: scroll;
+    }
 }
