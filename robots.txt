@@ -1,0 +1,12 @@
+# Robots.txt for Casabon Ristrutturazioni
+# https://casabon.netlify.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://casabon.netlify.app/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
