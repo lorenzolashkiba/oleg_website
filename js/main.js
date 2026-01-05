@@ -692,3 +692,44 @@ function initParallax() {
 
 // Initialize parallax after page load
 window.addEventListener('load', initParallax);
+
+/* ============================================
+   Phone Number Bot Protection
+   ============================================ */
+function initPhoneProtection() {
+    // Deobfuscate phone number only for real users (not bots)
+    const phoneLinks = document.querySelectorAll('.phone-link');
+    const whatsappLinks = document.querySelectorAll('.whatsapp-link');
+
+    phoneLinks.forEach(link => {
+        const p1 = link.dataset.p1;
+        const p2 = link.dataset.p2;
+        const p3 = link.dataset.p3;
+
+        if (p1 && p2 && p3) {
+            const phoneNumber = '+39' + p1 + p2 + p3;
+            const formattedPhone = '+39 ' + p1 + ' ' + p2 + ' ' + p3;
+
+            link.href = 'tel:' + phoneNumber;
+
+            // Se ha la classe phone-display, mostra anche il numero
+            if (link.classList.contains('phone-display')) {
+                link.textContent = formattedPhone;
+            }
+        }
+    });
+
+    whatsappLinks.forEach(link => {
+        const p1 = link.dataset.p1;
+        const p2 = link.dataset.p2;
+        const p3 = link.dataset.p3;
+
+        if (p1 && p2 && p3) {
+            const phoneNumber = '39' + p1 + p2 + p3;
+            link.href = 'https://wa.me/' + phoneNumber + '?text=Ciao%2C%20vorrei%20informazioni%20sui%20vostri%20servizi%20di%20ristrutturazione.';
+        }
+    });
+}
+
+// Initialize phone protection after DOM is loaded
+document.addEventListener('DOMContentLoaded', initPhoneProtection);
