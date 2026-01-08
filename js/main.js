@@ -493,17 +493,43 @@ function initContactForm() {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Get form data
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
+        // Get form elements
+        const nameInput = form.querySelector('#name');
+        const emailInput = form.querySelector('#email');
+        const phoneInput = form.querySelector('#phone');
+        const messageInput = form.querySelector('#message');
+        const privacyCheckbox = form.querySelector('#privacy');
 
         // Basic validation
-        const errors = validateForm(data);
+        const errors = [];
+
+        if (!nameInput.value || nameInput.value.trim().length < 2) {
+            errors.push('Inserisci un nome valido');
+        }
+
+        if (!emailInput.value || !isValidEmail(emailInput.value)) {
+            errors.push('Inserisci un\'email valida');
+        }
+
+        if (!phoneInput.value || phoneInput.value.trim().length < 8) {
+            errors.push('Inserisci un numero di telefono valido');
+        }
+
+        if (!messageInput.value || messageInput.value.trim().length < 10) {
+            errors.push('Il messaggio deve contenere almeno 10 caratteri');
+        }
+
+        if (!privacyCheckbox.checked) {
+            errors.push('Devi accettare la privacy policy');
+        }
 
         if (errors.length > 0) {
             showFormMessage(errors.join('<br>'), 'error');
             return;
         }
+
+        // Get form data
+        const formData = new FormData(form);
 
         // Show loading state
         const submitBtn = form.querySelector('button[type="submit"]');
@@ -534,32 +560,6 @@ function initContactForm() {
             submitBtn.disabled = false;
         });
     });
-
-    function validateForm(data) {
-        const errors = [];
-
-        if (!data.name || data.name.trim().length < 2) {
-            errors.push('Inserisci un nome valido');
-        }
-
-        if (!data.email || !isValidEmail(data.email)) {
-            errors.push('Inserisci un\'email valida');
-        }
-
-        if (!data.phone || data.phone.trim().length < 8) {
-            errors.push('Inserisci un numero di telefono valido');
-        }
-
-        if (!data.message || data.message.trim().length < 10) {
-            errors.push('Il messaggio deve contenere almeno 10 caratteri');
-        }
-
-        if (!data.privacy) {
-            errors.push('Devi accettare la privacy policy');
-        }
-
-        return errors;
-    }
 
     function isValidEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -1013,7 +1013,9 @@
                 </div>
 
                 <div class="contact-form-wrapper" data-aos="fade-left">
-                    <form id="contact-form" class="contact-form" name="contatti" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <form id="contact-form" class="contact-form" name="contatti" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Campo nascosto per Netlify Forms -->
+                        <input type="hidden" name="form-name" value="contatti">
                         <!-- Honeypot anti-spam nascosto -->
                         <p class="hidden" style="display:none;">
                             <label>Non compilare questo campo: <input name="bot-field"></label>
