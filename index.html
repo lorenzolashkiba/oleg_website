@@ -295,12 +295,25 @@
             },
             {
                 "@type": "SiteNavigationElement",
+                "name": "Guide",
+                "url": "https://casabon.netlify.app/guide.html"
+            },
+            {
+                "@type": "SiteNavigationElement",
                 "name": "Contatti",
                 "url": "https://casabon.netlify.app/#contatti"
             }
         ]
     }
     </script>
+
+    <!-- Critical CSS Inline per First Contentful Paint veloce -->
+    <style>
+        .preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#1a1a2e;display:flex;align-items:center;justify-content:center;z-index:9999}
+        .navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 0;transition:all .3s ease}
+        .hero{min-height:100vh;display:flex;align-items:center;background:#1a1a2e}
+        body{font-family:'Poppins',sans-serif;margin:0;padding:0}
+    </style>
 </head>
 <body>
     <!-- Skip Navigation Link per accessibilità -->
@@ -324,6 +337,7 @@
                 <li><a href="#servizi" class="nav-link">Servizi</a></li>
                 <li><a href="#perche-noi" class="nav-link">Perché Noi</a></li>
                 <li><a href="#recensioni" class="nav-link">Recensioni</a></li>
+                <li><a href="guide.html" class="nav-link">Guide</a></li>
                 <li><a href="#contatti" class="nav-link">Contatti</a></li>
             </ul>
             <a href="#" class="nav-cta phone-link" data-p1="327" data-p2="410" data-p3="5610">
@@ -381,10 +395,10 @@
             <div class="about-grid">
                 <div class="about-images" data-aos="fade-right" data-aos-duration="1000">
                     <div class="about-img-main">
-                        <img src="images/work/1.jpeg" alt="Il team Casabon al lavoro">
+                        <img src="images/work/1.webp" alt="Il team Casabon al lavoro - Ristrutturazioni Treviso" width="600" height="400" loading="eager">
                     </div>
                     <div class="about-img-secondary">
-                        <img src="images/work/2.jpeg" alt="Lavori di ristrutturazione">
+                        <img src="images/work/2.webp" alt="Lavori di ristrutturazione Casabon Mestre" width="300" height="200" loading="lazy">
                     </div>
                     <div class="experience-badge">
                         <span class="exp-number">15+</span>
@@ -447,7 +461,7 @@
                 <!-- Servizio 1: Ristrutturazione -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600" alt="Ristrutturazione completa">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=75" alt="Ristrutturazione completa appartamenti Treviso" width="600" height="400" loading="lazy">
                         <div class="service-overlay">
                             <a href="#contatti" class="service-btn">Richiedi Info</a>
                         </div>
@@ -469,7 +483,7 @@
                 <!-- Servizio 2: Pittura Interni ed Esterni -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600" alt="Pittura interni ed esterni">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=75" alt="Pittura interni ed esterni Mestre Venezia" width="600" height="400" loading="lazy">
                         <div class="service-overlay">
                             <a href="#contatti" class="service-btn">Richiedi Info</a>
                         </div>
@@ -491,7 +505,7 @@
                 <!-- Servizio 3: Bagni e Cucine -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600" alt="Ristrutturazione bagni e cucine">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=75" alt="Ristrutturazione bagni e cucine Treviso" width="600" height="400" loading="lazy">
                         <div class="service-overlay">
                             <a href="#contatti" class="service-btn">Richiedi Info</a>
                         </div>
@@ -513,7 +527,7 @@
                 <!-- Servizio 4: Rinnovazione Interni -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600" alt="Rinnovazione interni">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=75" alt="Rinnovazione interni Venezia" width="600" height="400" loading="lazy">
                         <div class="service-overlay">
                             <a href="#contatti" class="service-btn">Richiedi Info</a>
                         </div>
@@ -549,7 +563,7 @@
                     <!-- Slide 1 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/3.jpeg" alt="Ristrutturazione completa">
+                            <img src="images/work/3.webp" alt="Ristrutturazione completa appartamento Treviso Centro" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Ristrutturazione Completa</span>
                                 <h4>Appartamento Rinnovato</h4>
@@ -561,7 +575,7 @@
                     <!-- Slide 2 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/4.jpeg" alt="Lavori di pittura">
+                            <img src="images/work/4.webp" alt="Lavori di pittura interni Mogliano Veneto" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Pittura</span>
                                 <h4>Pittura Interni</h4>
@@ -573,7 +587,7 @@
                     <!-- Slide 3 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/5.jpeg" alt="Rinnovazione interni">
+                            <img src="images/work/5.webp" alt="Rinnovazione interni moderni Mestre" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Rinnovazione</span>
                                 <h4>Interni Moderni</h4>
@@ -585,7 +599,7 @@
                     <!-- Slide 4 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/6.jpeg" alt="Ristrutturazione bagno">
+                            <img src="images/work/6.webp" alt="Ristrutturazione bagno design Venezia" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Bagno</span>
                                 <h4>Bagno di Design</h4>
@@ -597,7 +611,7 @@
                     <!-- Slide 5 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/7.jpeg" alt="Lavori edili">
+                            <img src="images/work/7.webp" alt="Lavori edili Spinea" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Ristrutturazione</span>
                                 <h4>Lavori Edili</h4>
@@ -609,7 +623,7 @@
                     <!-- Slide 6 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/8.jpeg" alt="Appartamento ristrutturato">
+                            <img src="images/work/8.webp" alt="Appartamento ristrutturato Mirano" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Appartamento</span>
                                 <h4>Ristrutturazione Completa</h4>
@@ -621,7 +635,7 @@
                     <!-- Slide 7 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/9.jpeg" alt="Rinnovazione cucina">
+                            <img src="images/work/9.webp" alt="Rinnovazione cucina moderna Marghera" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Cucina</span>
                                 <h4>Cucina Moderna</h4>
@@ -633,7 +647,7 @@
                     <!-- Slide 8 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/10.jpeg" alt="Pittura decorativa">
+                            <img src="images/work/10.webp" alt="Pittura decorativa Preganziol" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Pittura</span>
                                 <h4>Pittura Decorativa</h4>
@@ -645,7 +659,7 @@
                     <!-- Slide 9 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/11.jpeg" alt="Ristrutturazione interni">
+                            <img src="images/work/11.webp" alt="Ristrutturazione interni totale Silea" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Interni</span>
                                 <h4>Rinnovazione Totale</h4>
@@ -657,7 +671,7 @@
                     <!-- Slide 10 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/12.jpeg" alt="Lavori di ristrutturazione">
+                            <img src="images/work/12.webp" alt="Lavori di ristrutturazione Casier" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Ristrutturazione</span>
                                 <h4>Progetto Completo</h4>
@@ -669,7 +683,7 @@
                     <!-- Slide 11 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/13.jpeg" alt="Bagno moderno">
+                            <img src="images/work/13.webp" alt="Bagno moderno Villorba" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Bagno</span>
                                 <h4>Bagno Moderno</h4>
@@ -681,7 +695,7 @@
                     <!-- Slide 12 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/14.jpeg" alt="Imbiancatura professionale">
+                            <img src="images/work/14.webp" alt="Imbiancatura professionale Favaro Veneto" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Imbiancatura</span>
                                 <h4>Imbiancatura Professionale</h4>
@@ -693,7 +707,7 @@
                     <!-- Slide 13 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/15.jpeg" alt="Ristrutturazione casa">
+                            <img src="images/work/15.webp" alt="Ristrutturazione casa Paese Treviso" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Casa</span>
                                 <h4>Ristrutturazione Casa</h4>
@@ -705,7 +719,7 @@
                     <!-- Slide 14 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/16.jpeg" alt="Lavori completati">
+                            <img src="images/work/16.webp" alt="Lavori completati Quinto di Treviso" width="400" height="300" loading="lazy">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Progetto</span>
                                 <h4>Lavoro Completato</h4>
@@ -999,7 +1013,11 @@
                 </div>
 
                 <div class="contact-form-wrapper" data-aos="fade-left">
-                    <form id="contact-form" class="contact-form">
+                    <form id="contact-form" class="contact-form" name="contatti" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Honeypot anti-spam nascosto -->
+                        <p class="hidden" style="display:none;">
+                            <label>Non compilare questo campo: <input name="bot-field"></label>
+                        </p>
                         <h3>Richiedi un Preventivo Gratuito</h3>
                         <div class="form-row">
                             <div class="form-group">
@@ -1131,10 +1149,17 @@
         </a>
     </div>
 
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS Animation Library - Caricamento differito -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <!-- Custom JS - Caricamento differito -->
+    <script src="js/main.js" defer></script>
+
+    <!-- DNS Prefetch per risorse esterne -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
+    <link rel="dns-prefetch" href="//images.unsplash.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
 </body>
 </html>

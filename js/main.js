@@ -483,7 +483,7 @@ function initReviewsSlider() {
 }
 
 /* ============================================
-   Contact Form
+   Contact Form - Netlify Forms
    ============================================ */
 function initContactForm() {
     const form = document.getElementById('contact-form');
@@ -505,20 +505,34 @@ function initContactForm() {
             return;
         }
 
-        // Simulate form submission
+        // Show loading state
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
 
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Invio in corso...';
         submitBtn.disabled = true;
 
-        // Simulate API call
-        setTimeout(() => {
-            showFormMessage('Grazie per averci contattato! Ti risponderemo entro 24 ore.', 'success');
-            form.reset();
+        // Submit to Netlify Forms
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(response => {
+            if (response.ok) {
+                showFormMessage('Grazie per averci contattato! Ti risponderemo entro 24 ore.', 'success');
+                form.reset();
+            } else {
+                throw new Error('Errore durante l\'invio');
+            }
+        })
+        .catch(error => {
+            showFormMessage('Si è verificato un errore. Riprova o contattaci telefonicamente.', 'error');
+        })
+        .finally(() => {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-        }, 1500);
+        });
     });
 
     function validateForm(data) {

@@ -52,6 +52,14 @@
     <priority>0.70</priority>
   </url>
 
+  <!-- Guide -->
+  <url>
+    <loc>https://casabon.netlify.app/guide.html</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
   <!-- Contatti -->
   <url>
     <loc>https://casabon.netlify.app/#contatti</loc>
