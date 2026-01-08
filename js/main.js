@@ -528,9 +528,6 @@ function initContactForm() {
             return;
         }
 
-        // Get form data
-        const formData = new FormData(form);
-
         // Show loading state
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
@@ -538,11 +535,21 @@ function initContactForm() {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Invio in corso...';
         submitBtn.disabled = true;
 
+        // Build form data manually to ensure form-name is included
+        const formData = new URLSearchParams();
+        formData.append('form-name', 'contatti');
+        formData.append('name', nameInput.value);
+        formData.append('email', emailInput.value);
+        formData.append('phone', phoneInput.value);
+        formData.append('service', form.querySelector('#service').value);
+        formData.append('message', messageInput.value);
+        formData.append('privacy', privacyCheckbox.checked ? 'on' : '');
+
         // Submit to Netlify Forms
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
+            body: formData.toString()
         })
         .then(response => {
             if (response.ok) {
