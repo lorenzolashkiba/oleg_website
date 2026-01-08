@@ -535,21 +535,21 @@ function initContactForm() {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Invio in corso...';
         submitBtn.disabled = true;
 
-        // Build form data manually to ensure form-name is included
-        const formData = new URLSearchParams();
-        formData.append('form-name', 'contatti');
+        // Build form data for Formspree
+        const formData = new FormData();
         formData.append('name', nameInput.value);
         formData.append('email', emailInput.value);
         formData.append('phone', phoneInput.value);
         formData.append('service', form.querySelector('#service').value);
         formData.append('message', messageInput.value);
-        formData.append('privacy', privacyCheckbox.checked ? 'on' : '');
 
-        // Submit to Netlify Forms
-        fetch('/', {
+        // Submit to Formspree (GRATUITO - 50 invii/mese)
+        fetch('https://formspree.io/f/xaqnrgdw', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: formData.toString()
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
         })
         .then(response => {
             if (response.ok) {
