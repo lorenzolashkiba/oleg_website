@@ -546,7 +546,7 @@ function initContactForm() {
         })
         .then(response => {
             if (response.ok) {
-                showFormMessage('Grazie per averci contattato! Ti risponderemo entro 24 ore.', 'success');
+                showSuccessOverlay();
                 form.reset();
             } else {
                 throw new Error('Errore durante l\'invio');
@@ -593,6 +593,96 @@ function initContactForm() {
             messageEl.style.opacity = '0';
             messageEl.style.transition = 'opacity 0.3s ease';
             setTimeout(() => messageEl.remove(), 300);
+        }, 5000);
+    }
+
+    function showSuccessOverlay() {
+        // Create overlay
+        const overlay = document.createElement('div');
+        overlay.id = 'success-overlay';
+        overlay.innerHTML = `
+            <div class="success-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Preventivo Inviato!</h2>
+                <p>Grazie per averci contattato.<br>Ti risponderemo entro 24 ore.</p>
+                <button class="btn btn-primary" onclick="document.getElementById('success-overlay').remove()">
+                    <span>Chiudi</span>
+                </button>
+            </div>
+        `;
+        overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 46, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease;
+        `;
+
+        // Add styles for content
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes scaleIn {
+                from { transform: scale(0.8); opacity: 0; }
+                to { transform: scale(1); opacity: 1; }
+            }
+            @keyframes checkmark {
+                0% { transform: scale(0); }
+                50% { transform: scale(1.2); }
+                100% { transform: scale(1); }
+            }
+            #success-overlay .success-content {
+                text-align: center;
+                color: #fff;
+                padding: 40px;
+                animation: scaleIn 0.4s ease;
+            }
+            #success-overlay .success-icon {
+                font-size: 80px;
+                color: #27ae60;
+                margin-bottom: 20px;
+                animation: checkmark 0.6s ease 0.2s both;
+            }
+            #success-overlay h2 {
+                font-size: 36px;
+                margin-bottom: 15px;
+                background: linear-gradient(135deg, #f39c12, #e74c3c);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            #success-overlay p {
+                font-size: 18px;
+                color: rgba(255,255,255,0.8);
+                margin-bottom: 30px;
+                line-height: 1.6;
+            }
+            #success-overlay .btn {
+                padding: 15px 40px;
+                font-size: 16px;
+            }
+        `;
+        document.head.appendChild(style);
+        document.body.appendChild(overlay);
+
+        // Auto-close after 5 seconds
+        setTimeout(() => {
+            if (document.getElementById('success-overlay')) {
+                overlay.style.opacity = '0';
+                overlay.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => overlay.remove(), 300);
+            }
         }, 5000);
     }
 }
