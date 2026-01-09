@@ -899,7 +899,7 @@ h4 { font-size: 1.25rem; }
     position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
     box-shadow: var(--shadow-md);
 }
 
@@ -2128,7 +2128,7 @@ h4 { font-size: 1.25rem; }
         font-size: 0.85rem;
     }
 
-    /* Portfolio mobile - immagine 75% viewport, carousel infinito */
+    /* Portfolio mobile - carousel standard */
     .portfolio-section {
         padding: var(--section-padding) 0;
     }
@@ -2140,43 +2140,22 @@ h4 { font-size: 1.25rem; }
         position: relative;
     }
 
-    /* Gradienti ai bordi per indicare contenuto swipeable */
-    .portfolio-carousel::before,
-    .portfolio-carousel::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 30px;
-        height: calc(100% - 60px);
-        pointer-events: none;
-        z-index: 5;
-    }
-
-    .portfolio-carousel::before {
-        left: 0;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
-    }
-
-    .portfolio-carousel::after {
-        right: 0;
-        background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
-    }
-
     .portfolio-track {
-        gap: 15px;
+        gap: 0;
     }
 
     .portfolio-slide {
-        flex: 0 0 75vw;
-        min-width: 75vw;
-        padding: 0;
+        flex: 0 0 100%;
+        min-width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
     }
 
     .portfolio-image {
-        aspect-ratio: 4/5;
+        aspect-ratio: auto;
         border-radius: var(--radius-md);
-        height: 75vh;
-        max-height: 450px;
+        height: 70vh;
+        max-height: 500px;
     }
 
     /* Touch targets minimi 44px per accessibilità */

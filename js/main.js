@@ -242,7 +242,11 @@ function initPortfolioCarousel() {
     function getSlideWidth() {
         const slide = track.querySelector('.portfolio-slide');
         if (!slide) return 0;
-        const gap = window.innerWidth <= 480 ? 15 : 25;
+        // Su mobile (<=480px) le slide sono 100% della viewport, senza gap
+        if (window.innerWidth <= 480) {
+            return slide.offsetWidth;
+        }
+        const gap = window.innerWidth <= 1024 ? 25 : 25;
         return slide.offsetWidth + gap;
     }
 
