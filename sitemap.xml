@@ -60,6 +60,22 @@
     <priority>0.80</priority>
   </url>
 
+  <!-- Ristrutturazioni Treviso -->
+  <url>
+    <loc>https://casabon.netlify.app/ristrutturazioni-treviso.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Ristrutturazioni Mestre -->
+  <url>
+    <loc>https://casabon.netlify.app/ristrutturazioni-mestre.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
   <!-- Contatti -->
   <url>
     <loc>https://casabon.netlify.app/#contatti</loc>

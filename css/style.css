@@ -1702,6 +1702,7 @@ h4 { font-size: 1.25rem; }
     justify-content: center;
     color: var(--white);
     font-size: 1.75rem;
+    box-.DS_Store
     box-shadow: var(--shadow-lg), 0 0 20px rgba(37, 211, 102, 0.4);
     transition: var(--transition-base);
 }
@@ -2480,6 +2481,709 @@ h4 { font-size: 1.25rem; }
 }
 
 /* ============================================
+   Page Hero (City Pages)
+   ============================================ */
+.page-hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: linear-gradient(135deg, rgba(45, 90, 74, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%), url('../images/work/hero.webp') center/cover no-repeat;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero .container {
+    display: flex;
+    justify-content: center;
+}
+
+.page-hero-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.page-hero h1 .gradient-text {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-hero .hero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.page-hero .hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-hero .btn-secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.page-hero .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    .page-hero .container {
+        justify-content: center;
+    }
+
+    .page-hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-hero .hero-description {
+        font-size: 1rem;
+    }
+
+    .page-hero .hero-buttons {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-hero .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   Zone Operative Section
+   ============================================ */
+.zones-section {
+    padding: 80px 0;
+    background: var(--dark);
+    color: white;
+}
+
+.zones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.zone-card {
+    background: rgba(255,255,255,0.1);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.zone-card:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px);
+}
+
+.zone-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.zone-icon {
+    font-size: 32px;
+    color: var(--secondary);
+    flex-shrink: 0;
+}
+
+.zone-card h3 {
+    font-size: 22px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.zone-card p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.zone-link {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.zones-extra {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
+
+.zones-extra h4 {
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.zones-extra p {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+}
+
+/* Override section header styles for dark background */
+.zones-section .section-subtitle {
+    color: var(--secondary);
+}
+
+.zones-section .section-title {
+    color: #ffffff;
+}
+
+.zones-section .section-description {
+    color: rgba(255,255,255,0.8);
+}
+
+/* Zone Operative Mobile */
+@media (max-width: 768px) {
+    .zones-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .zone-card {
+        padding: 25px 20px;
+    }
+
+    .zone-card-header {
+        gap: 12px;
+    }
+
+    .zone-icon {
+        font-size: 28px;
+    }
+
+    .zone-card h3 {
+        font-size: 18px;
+    }
+
+    .zone-card p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .zones-extra {
+        padding: 20px 15px;
+    }
+
+    .zones-extra p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+/* ============================================
+   Local Pages (Ristrutturazioni Città)
+   ============================================ */
+
+/* Intro Section */
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro-content p {
+    color: var(--gray-700);
+    margin-bottom: 15px;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Services Local Grid */
+.services-grid-local {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card-local {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card-local .service-icon,
+.service-card-local > div:first-child {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.service-card-local .service-icon i,
+.service-card-local > div:first-child i {
+    color: white !important;
+    font-size: 24px !important;
+}
+
+.service-card-local .service-content {
+    flex: 1;
+}
+
+.service-card-local h3 {
+    color: var(--dark);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.service-card-local p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Why Us Local Grid */
+.why-grid-local {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.why-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background: var(--gray-100);
+    border-radius: 12px;
+}
+
+.why-item .why-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-item .why-icon i {
+    color: white;
+}
+
+.why-item h4 {
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.why-item p {
+    margin: 0;
+    color: var(--gray-600);
+}
+
+/* Works Local Grid */
+.works-grid-local {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.work-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.work-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.work-card-content {
+    padding: 20px;
+}
+
+.work-card-content span {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.work-card-content h4 {
+    margin: 8px 0;
+    color: var(--dark);
+}
+
+.work-card-content p {
+    color: var(--gray-600);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Pricing Local Grid */
+.pricing-grid-local {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pricing-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 2px solid var(--gray-200);
+}
+
+.pricing-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.pricing-card .price {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    color: var(--gray-600);
+    font-size: 14px;
+}
+
+.pricing-card.featured {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+    border: none;
+}
+
+.pricing-card.featured h3 {
+    color: white;
+}
+
+.pricing-card.featured .price {
+    color: white;
+}
+
+.pricing-card.featured p {
+    color: rgba(255,255,255,0.9);
+}
+
+/* FAQ Local */
+.faq-list {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+.faq-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.faq-item h4 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.faq-item h4 i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.faq-item p {
+    margin: 0;
+    color: var(--gray-600);
+}
+
+/* Challenges Section (Venezia page) - Dark Background */
+.challenges-section {
+    padding: 80px 0;
+    background: var(--dark);
+    color: white;
+}
+
+.challenges-section .section-title {
+    color: white;
+}
+
+.challenges-section .section-subtitle {
+    color: rgba(255,255,255,0.8);
+}
+
+.challenge-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.challenge-card h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.challenge-card p {
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.challenge-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.challenge-icon i {
+    color: var(--secondary);
+}
+
+/* CTA Local Section */
+.cta-local {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+    color: white;
+}
+
+.cta-local h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cta-local p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Mobile Responsive for Local Pages */
+@media (max-width: 992px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .intro-image {
+        order: -1;
+    }
+
+    .services-grid-local,
+    [style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .pricing-grid-local,
+    .pricing-card.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Intro Section */
+    .intro-grid,
+    [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .intro-content {
+        text-align: center;
+    }
+
+    .intro-image {
+        order: -1;
+    }
+
+    /* Services Grid */
+    .services-grid-local,
+    [style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .service-card-local,
+    [class*="service-card-local"] {
+        padding: 20px !important;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .service-card-local .service-icon,
+    .service-card-local > div:first-child {
+        width: 50px !important;
+        min-width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 0 !important;
+        flex-shrink: 0;
+    }
+
+    .service-card-local .service-icon i,
+    .service-card-local > div:first-child i {
+        font-size: 20px !important;
+    }
+
+    .service-card-local h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .service-card-local p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Why Us Grid */
+    .why-grid-local,
+    [style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .why-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px !important;
+    }
+
+    .why-item .why-icon,
+    [class*="why-icon"] {
+        margin: 0 auto 15px;
+    }
+
+    /* Works Grid */
+    .works-grid-local,
+    [style*="works-grid"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    .work-card img {
+        height: 200px;
+    }
+
+    /* Pricing Grid */
+    .pricing-grid-local {
+        grid-template-columns: 1fr !important;
+    }
+
+    .pricing-card,
+    .pricing-card.featured {
+        transform: none !important;
+    }
+
+    /* CTA Section */
+    .cta-local h2,
+    [class*="cta-local"] h2 {
+        font-size: 28px !important;
+    }
+
+    .cta-local p {
+        font-size: 16px !important;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn,
+    .cta-buttons a {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    /* FAQ */
+    .faq-item {
+        padding: 20px !important;
+    }
+
+    .faq-item h4 {
+        font-size: 1rem;
+    }
+
+    /* Challenge Cards Mobile */
+    .challenges-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .challenge-card {
+        padding: 25px !important;
+    }
+
+    .challenge-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================
    Blog/Guide Section
    ============================================ */
 .blog-section {
@@ -2576,5 +3280,71 @@ h4 { font-size: 1.25rem; }
 
     .blog-tips li {
         justify-content: center;
+    }
+}
+
+/* ============================================
+   Zones Section
+   ============================================ */
+.zones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.zone-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.zone-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.zone-card h3 {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.zone-card h3 i {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.zone-card p {
+    color: rgba(255, 255, 255, 0.8);
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.zone-link {
+    color: var(--secondary);
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+.zone-link i {
+    margin-left: 5px;
+    transition: var(--transition-base);
+}
+
+.zone-card:hover .zone-link i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .zones-grid {
+        grid-template-columns: 1fr;
     }
 }
