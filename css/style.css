@@ -40,7 +40,7 @@
     --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
     --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--dark-soft) 100%);
-    --gradient-hero: linear-gradient(135deg, rgba(45, 90, 74, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(45, 90, 74, 0.85) 0%, rgba(26, 26, 46, 0.85) 100%);
 
     /* Typography */
     --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -471,7 +471,7 @@ h4 { font-size: 1.25rem; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../images/work/hero.jpeg') center/cover no-repeat;
+    background: url('../images/work/hero.webp') center/cover no-repeat;
     padding: 120px 20px 60px;
 }
 
