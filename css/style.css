@@ -471,7 +471,7 @@ h4 { font-size: 1.25rem; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=1920') center/cover no-repeat;
+    background: url('../images/work/hero.jpeg') center/cover no-repeat;
     padding: 120px 20px 60px;
 }
 
