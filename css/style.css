@@ -2593,10 +2593,16 @@ h4 { font-size: 1.25rem; }
 }
 
 .zones-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin-top: 50px;
+}
+
+.zones-grid .zone-card {
+    flex: 0 1 350px;
+    max-width: 400px;
 }
 
 .zone-card {
@@ -2679,8 +2685,15 @@ h4 { font-size: 1.25rem; }
 /* Zone Operative Mobile */
 @media (max-width: 768px) {
     .zones-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
+    }
+
+    .zones-grid .zone-card {
+        flex: 0 1 auto;
+        width: 100%;
+        max-width: 100%;
     }
 
     .zone-card {
@@ -2750,32 +2763,6 @@ h4 { font-size: 1.25rem; }
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    overflow: hidden;
-    position: relative;
-}
-
-.service-card-local .service-icon,
-.service-card-local > div:first-child {
-    width: 60px;
-    min-width: 60px;
-    height: 60px;
-    background: var(--primary);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    flex-shrink: 0;
-}
-
-.service-card-local .service-icon i,
-.service-card-local > div:first-child i {
-    color: white !important;
-    font-size: 24px !important;
-}
-
-.service-card-local .service-content {
-    flex: 1;
 }
 
 .service-card-local h3 {
@@ -3067,27 +3054,8 @@ h4 { font-size: 1.25rem; }
         gap: 20px !important;
     }
 
-    .service-card-local,
-    [class*="service-card-local"] {
+    .service-card-local {
         padding: 20px !important;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .service-card-local .service-icon,
-    .service-card-local > div:first-child {
-        width: 50px !important;
-        min-width: 50px !important;
-        height: 50px !important;
-        margin-bottom: 0 !important;
-        flex-shrink: 0;
-    }
-
-    .service-card-local .service-icon i,
-    .service-card-local > div:first-child i {
-        font-size: 20px !important;
     }
 
     .service-card-local h3 {
@@ -3287,9 +3255,9 @@ h4 { font-size: 1.25rem; }
    Zones Section
    ============================================ */
 .zones-grid {
-    display: grid;
+   /* display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 30px;*/
 }
 
 .zone-card {
@@ -3345,6 +3313,6 @@ h4 { font-size: 1.25rem; }
 
 @media (max-width: 992px) {
     .zones-grid {
-        grid-template-columns: 1fr;
+        /*grid-template-columns: 1fr;*/
     }
 }
