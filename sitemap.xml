@@ -6,66 +6,58 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://casabon.it/</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://[NUOVO-DOMINIO]/</loc>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <!-- Guide -->
   <url>
-    <loc>https://casabon.it/guide.html</loc>
-    <lastmod>2026-01-08</lastmod>
+    <loc>https://[NUOVO-DOMINIO]/guide.html</loc>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
-  <!-- Ristrutturazioni Treviso -->
+  <!-- Falegnameria e Ristrutturazioni Roma -->
   <url>
-    <loc>https://casabon.it/ristrutturazioni-treviso.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <!-- Ristrutturazioni Mestre -->
-  <url>
-    <loc>https://casabon.it/ristrutturazioni-mestre.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://[NUOVO-DOMINIO]/falegnameria-ristrutturazioni-roma.html</loc>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <!-- PAGINE SERVIZI -->
 
-  <!-- Ristrutturazione Appartamenti -->
+  <!-- Falegnameria su Misura (Servizio Principale) -->
   <url>
-    <loc>https://casabon.it/servizi/ristrutturazione-appartamenti.html</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://[NUOVO-DOMINIO]/servizi/falegnameria-su-misura.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Cucine in Legno -->
+  <url>
+    <loc>https://[NUOVO-DOMINIO]/servizi/cucine-legno.html</loc>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Pittura Interni ed Esterni -->
+  <!-- Pittura e Decorazioni -->
   <url>
-    <loc>https://casabon.it/servizi/pittura-interni-esterni.html</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://[NUOVO-DOMINIO]/servizi/pittura-decorazioni.html</loc>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Ristrutturazione Bagni e Cucine -->
+  <!-- Costruzioni e Ristrutturazioni -->
   <url>
-    <loc>https://casabon.it/servizi/ristrutturazione-bagni-cucine.html</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Rinnovazione Interni -->
-  <url>
-    <loc>https://casabon.it/servizi/rinnovazione-interni.html</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://[NUOVO-DOMINIO]/servizi/costruzioni-ristrutturazioni.html</loc>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
