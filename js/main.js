@@ -548,7 +548,7 @@ function initContactForm() {
         formData.append('message', messageInput.value);
 
         // Submit to Formspree (GRATUITO - 50 invii/mese)
-        fetch('https://formspree.io/f/xaqnrgdw', {
+        fetch('https://formspree.io/f/mjggllzj', {
             method: 'POST',
             body: formData,
             headers: {
