@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://[NUOVO-DOMINIO]/</loc>
+    <loc>https://legnoromano.it/</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
@@ -14,7 +14,7 @@
 
   <!-- Guide -->
   <url>
-    <loc>https://[NUOVO-DOMINIO]/guide.html</loc>
+    <loc>https://legnoromano.it/guide.html</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -22,7 +22,7 @@
 
   <!-- Falegnameria e Ristrutturazioni Roma -->
   <url>
-    <loc>https://[NUOVO-DOMINIO]/falegnameria-ristrutturazioni-roma.html</loc>
+    <loc>https://legnoromano.it/falegnameria-ristrutturazioni-roma.html</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
@@ -32,7 +32,7 @@
 
   <!-- Falegnameria su Misura (Servizio Principale) -->
   <url>
-    <loc>https://[NUOVO-DOMINIO]/servizi/falegnameria-su-misura.html</loc>
+    <loc>https://legnoromano.it/servizi/falegnameria-su-misura.html</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
@@ -40,7 +40,7 @@
 
   <!-- Cucine in Legno -->
   <url>
-    <loc>https://[NUOVO-DOMINIO]/servizi/cucine-legno.html</loc>
+    <loc>https://legnoromano.it/servizi/cucine-legno.html</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -48,7 +48,7 @@
 
   <!-- Pittura e Decorazioni -->
   <url>
-    <loc>https://[NUOVO-DOMINIO]/servizi/pittura-decorazioni.html</loc>
+    <loc>https://legnoromano.it/servizi/pittura-decorazioni.html</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -56,7 +56,7 @@
 
   <!-- Costruzioni e Ristrutturazioni -->
   <url>
-    <loc>https://[NUOVO-DOMINIO]/servizi/costruzioni-ristrutturazioni.html</loc>
+    <loc>https://legnoromano.it/servizi/costruzioni-ristrutturazioni.html</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
