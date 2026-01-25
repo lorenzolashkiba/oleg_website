@@ -1,11 +1,14 @@
-# Robots.txt for Casabon Ristrutturazioni
-# https://casabon.it
+# Robots.txt for Legno Romano - Falegnameria Roma
+# https://falegnameriaroma.netlify.app
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://casabon.it/sitemap.xml
+Sitemap: https://falegnameriaroma.netlify.app/sitemap.xml
+
+# LLMs.txt for AI crawlers
+# https://falegnameriaroma.netlify.app/llms.txt
 
 # Disallow admin or private areas (if any)
 Disallow: /admin/
