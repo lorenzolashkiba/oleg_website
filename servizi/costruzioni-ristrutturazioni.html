@@ -6,8 +6,8 @@
 
     <!-- SEO Meta Tags -->
     <title>Pittura e Ristrutturazioni Roma | Legno Romano - Impresa Edile</title>
-    <meta name="description" content="Costruzioni e ristrutturazioni a Roma. Impresa edile per ristrutturazioni complete di appartamenti, villette e locali commerciali. Chiavi in mano con garanzia.">
-    <meta name="keywords" content="ristrutturazioni Roma, costruzioni Roma, impresa edile Roma, ristrutturazione appartamenti Roma, ristrutturazione chiavi in mano Roma, lavori edili Roma">
+    <meta name="description" content="Ristrutturazioni e pittura decorativa a Roma. Impresa edile per ristrutturazioni complete con finiture speciali: mattoncini in rilievo, stucco veneziano, effetto pietra. Chiavi in mano.">
+    <meta name="keywords" content="ristrutturazioni Roma, pittura decorativa Roma, mattoncini in rilievo Roma, stucco veneziano Roma, impresa edile Roma, ristrutturazione appartamenti Roma, effetto pietra pareti Roma">
     <meta name="author" content="Legno Romano">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://falegnameriaroma.netlify.app/servizi/costruzioni-ristrutturazioni.html">
@@ -44,6 +44,9 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Swiper CSS for Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
@@ -63,6 +66,93 @@
         "description": "Costruzioni e ristrutturazioni complete a Roma. Impresa edile per appartamenti, villette e locali commerciali."
     }
     </script>
+
+    <style>
+        .content-image-section {
+            padding: 80px 0;
+        }
+        .content-image-section:nth-child(even) {
+            background: var(--gray-100);
+        }
+        .content-image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .content-image-grid.reverse {
+            direction: rtl;
+        }
+        .content-image-grid.reverse > * {
+            direction: ltr;
+        }
+        .content-image-text h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+        .content-image-text p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: var(--gray-700);
+            margin-bottom: 15px;
+        }
+        .content-image-img {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .content-image-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .content-image-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .content-image-grid.reverse {
+                direction: ltr;
+            }
+            .content-image-img img {
+                height: 300px;
+            }
+        }
+
+        /* Carousel Styles */
+        .gallery-carousel-section {
+            padding: 80px 0;
+            background: var(--gray-100);
+        }
+        .swiper {
+            width: 100%;
+            padding: 20px 0 50px;
+        }
+        .swiper-slide {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--primary) !important;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--primary) !important;
+        }
+        @media (max-width: 768px) {
+            .swiper-slide img {
+                height: 450px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -96,15 +186,15 @@
     <section class="page-hero">
         <div class="container">
             <div class="page-hero-content" data-aos="fade-up">
-                <h1>Costruzioni e <span class="gradient-text">Ristrutturazioni Roma</span></h1>
-                <p class="hero-description">Impresa edile per ristrutturazioni complete di appartamenti, villette e locali commerciali. Un unico referente, tempi certi e qualità garantita.</p>
+                <h1>Costruzioni e <span class="gradient-text">Ristrutturazioni Chiavi in Mano</span></h1>
+                <p class="hero-description">Impresa edile per ristrutturazioni complete di appartamenti, villette e locali commerciali. Un unico referente, tempi certi e qualita garantita.</p>
                 <div class="hero-buttons">
                     <a href="../index.html#contatti" class="btn btn-primary">
                         <span>Richiedi un preventivo gratuito</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#servizi" class="btn btn-secondary">
-                        <span>Scopri i servizi</span>
+                    <a href="#galleria" class="btn btn-secondary">
+                        <span>Guarda i nostri lavori</span>
                     </a>
                 </div>
             </div>
@@ -112,120 +202,117 @@
     </section>
 
     <main id="main-content">
-        <!-- Intro Section -->
-        <section class="intro-section" style="padding: 80px 0;">
+        <!-- Sezione 1: Come lavoriamo -->
+        <section class="content-image-section">
+            <div class="container">
+                <div class="content-image-grid" data-aos="fade-up">
+                    <div class="content-image-text">
+                        <h2>Come realizziamo le <span class="highlight">ristrutturazioni</span></h2>
+                        <p>Ogni ristrutturazione inizia con un sopralluogo gratuito presso il vostro immobile. I nostri tecnici valutano lo stato degli impianti, delle strutture murarie e delle finiture esistenti, ascoltando attentamente le vostre esigenze e il budget a disposizione. Questa fase preliminare ci permette di elaborare un progetto su misura che risponda perfettamente alle vostre aspettative.</p>
+                        <p>Dopo il sopralluogo, prepariamo un preventivo dettagliato voce per voce, senza costi nascosti o sorprese a fine lavori. Il documento include tutte le lavorazioni previste: demolizioni, rifacimento impianti elettrici e idraulici, massetti, intonaci, pavimentazioni, rivestimenti, pitture decorative e finiture speciali. Solo dopo la vostra approvazione diamo inizio ai lavori.</p>
+                        <p>La gestione del cantiere e affidata a un unico referente che coordina tutte le maestranze: muratori, elettricisti, idraulici, piastrellisti, imbianchini e decoratori specializzati. Realizziamo finiture decorative come mattoncini in rilievo, effetto pietra, stucco veneziano e velature artistiche che trasformano le pareti in elementi di design unici. Questo approccio chiavi in mano vi solleva da ogni preoccupazione organizzativa.</p>
+                        <p>Al termine della ristrutturazione, consegniamo l'immobile pulito e pronto per essere abitato o utilizzato. Effettuiamo un collaudo finale insieme a voi per verificare che ogni dettaglio sia conforme alle aspettative. La nostra garanzia copre tutti i lavori eseguiti, per la vostra totale tranquillita.</p>
+                    </div>
+                    <div class="content-image-img">
+                        <img src="../images/work/Giovane-pittura-facciata-costruttore-operaio-con-rullo-a-lavori-di-isolamento-termico.webp" alt="Lavori di ristrutturazione e pittura professionale" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione 2: Perche sceglierci -->
+        <section class="content-image-section">
+            <div class="container">
+                <div class="content-image-grid reverse" data-aos="fade-up">
+                    <div class="content-image-text">
+                        <h2>Perche scegliere <span class="highlight">Legno Romano</span></h2>
+                        <p>Ristrutturare casa e un investimento importante che richiede affidarsi a professionisti seri e competenti. Legno Romano vanta oltre 15 anni di esperienza nel settore edile romano, con centinaia di progetti completati tra appartamenti, villette e locali commerciali. Ogni lavoro e documentato e referenziato, a testimonianza della qualita del nostro operato.</p>
+                        <p>Il nostro punto di forza e l'integrazione tra competenze edili e falegnameria artigianale. Questo significa che possiamo offrire soluzioni complete: dalla ristrutturazione strutturale alla realizzazione di mobili su misura, scale in legno, librerie e complementi d'arredo. Un unico interlocutore per trasformare completamente la vostra casa.</p>
+                        <p>Utilizziamo esclusivamente materiali di prima qualita, selezionati da fornitori certificati. Le finiture sono curate nei minimi dettagli: pitture decorative con effetti tridimensionali, mattoncini a vista, pareti effetto cemento o marmo, pavimenti resistenti e sanitari di design. Siamo specializzati in tecniche decorative che danno carattere agli ambienti, dal rustico al moderno.</p>
+                        <p>La trasparenza e il nostro valore fondamentale. Il preventivo che ricevete e quello che pagherete, senza ricarichi o costi imprevisti. Rispettiamo le tempistiche concordate e, in caso di ritardi non dipendenti da noi, vi avvisiamo tempestivamente. Il nostro obiettivo e la vostra soddisfazione, perche un cliente contento e il nostro miglior biglietto da visita.</p>
+                    </div>
+                    <div class="content-image-img">
+                        <img src="../images/work/21.webp" alt="Ristrutturazione interni appartamento" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Carousel Section -->
+        <section id="galleria" class="gallery-carousel-section">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Ristrutturare casa <span class="highlight">senza stress</span></h2>
+                    <h2 class="section-title">I nostri <span class="highlight">lavori</span></h2>
+                    <p class="section-description">Scopri alcune delle ristrutturazioni che abbiamo realizzato per i nostri clienti.</p>
                 </div>
-                <div class="intro-content" style="max-width: 800px; margin: 0 auto; text-align: center;" data-aos="fade-up">
-                    <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700); margin-bottom: 20px;">Legno Romano è un'impresa edile specializzata in ristrutturazioni complete a Roma. Ci occupiamo di ogni fase del progetto: dalla progettazione iniziale alla consegna finale, con un unico referente e senza sorprese.</p>
-                    <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700);">La nostra esperienza nella falegnameria ci permette di offrire soluzioni integrate: ristrutturazione edile abbinata a mobili e finiture in legno su misura.</p>
+                <div class="swiper gallery-swiper" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../images/work/21.webp" alt="Ristrutturazione ingresso appartamento" loading="lazy">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="../images/work/6.webp" alt="Lavorazione artigianale del legno" loading="lazy">
+                        </div>
+                     
+                        <div class="swiper-slide">
+                            <img src="../images/work/18.webp" alt="Mobile ingresso rustico legno" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
 
         <!-- Servizi Section -->
-        <section id="servizi" class="services-include" style="padding: 80px 0; background: var(--gray-100);">
+        <section id="servizi" class="services-include" style="padding: 80px 0;">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Cosa comprende la <span class="highlight">ristrutturazione completa</span></h2>
+                    <h2 class="section-title">Cosa comprende la <span class="highlight">ristrutturazione</span></h2>
                 </div>
                 <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 50px;">
-                    <div class="feature-item" data-aos="fade-up" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px;">
-                        <i class="fas fa-check-circle" style="color: var(--primary); font-size: 24px;"></i>
-                        <span style="font-size: 17px; color: var(--dark);">Progettazione e consulenza tecnica</span>
-                    </div>
-                   
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="150" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px;">
-                        <i class="fas fa-check-circle" style="color: var(--primary); font-size: 24px;"></i>
-                        <span style="font-size: 17px; color: var(--dark);">Murature, cartongessi e massetti</span>
-                    </div>
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px;">
-                        <i class="fas fa-check-circle" style="color: var(--primary); font-size: 24px;"></i>
-                        <span style="font-size: 17px; color: var(--dark);">Pavimenti e rivestimenti</span>
-                    </div>
-                    <div class="feature-item" data-aos="fade-up" data-aos-delay="250" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px;">
-                        <i class="fas fa-check-circle" style="color: var(--primary); font-size: 24px;"></i>
-                        <span style="font-size: 17px; color: var(--dark);">Pitture e finiture finali</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tipologie Section -->
-        <section class="target-section" style="padding: 80px 0;">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Tipologie di <span class="highlight">intervento</span></h2>
-                </div>
-                <div class="target-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px;">
-                    <div class="target-item" data-aos="fade-up" style="text-align: center; padding: 30px;">
-                        <div style="width: 70px; height: 70px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                            <i class="fas fa-building" style="color: white; font-size: 28px;"></i>
-                        </div>
-                        <h4 style="margin-bottom: 10px;">Appartamenti</h4>
-                        <p style="color: var(--gray-600); font-size: 14px;">Ristrutturazioni complete o parziali</p>
-                    </div>
-                    <div class="target-item" data-aos="fade-up" data-aos-delay="100" style="text-align: center; padding: 30px;">
-                        <div style="width: 70px; height: 70px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                            <i class="fas fa-home" style="color: white; font-size: 28px;"></i>
-                        </div>
-                        <h4 style="margin-bottom: 10px;">Villette</h4>
-                        <p style="color: var(--gray-600); font-size: 14px;">Interni ed esterni, giardini inclusi</p>
-                    </div>
-                    <div class="target-item" data-aos="fade-up" data-aos-delay="200" style="text-align: center; padding: 30px;">
-                        <div style="width: 70px; height: 70px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                            <i class="fas fa-store" style="color: white; font-size: 28px;"></i>
-                        </div>
-                        <h4 style="margin-bottom: 10px;">Locali commerciali</h4>
-                        <p style="color: var(--gray-600); font-size: 14px;">Negozi, uffici, ristoranti</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Il Metodo -->
-        <section id="metodo" class="method-section" style="padding: 80px 0; background: var(--gray-100);">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Il nostro <span class="highlight">metodo di lavoro</span></h2>
-                </div>
-                <div class="method-steps" style="max-width: 800px; margin: 50px auto 0;">
-                    <div class="step-item" data-aos="fade-up" style="display: flex; gap: 25px; margin-bottom: 30px; align-items: flex-start;">
-                        <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <span style="color: white; font-weight: 700; font-size: 20px;">1</span>
-                        </div>
+                    <div class="feature-item" data-aos="fade-up" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <i class="fas fa-hard-hat" style="color: var(--primary); font-size: 24px;"></i>
                         <div>
-                            <h4 style="margin-bottom: 8px; font-size: 20px;">Sopralluogo gratuito</h4>
-                            <p style="color: var(--gray-600); margin: 0;">Veniamo a casa tua per valutare lo stato dell'immobile e ascoltare le tue esigenze.</p>
+                            <strong style="font-size: 17px; color: var(--dark);">Demolizioni e murature</strong>
+                            <p style="margin: 5px 0 0; color: var(--gray-600); font-size: 14px;">Abbattimento tramezzi e nuove pareti</p>
                         </div>
                     </div>
-                    <div class="step-item" data-aos="fade-up" data-aos-delay="100" style="display: flex; gap: 25px; margin-bottom: 30px; align-items: flex-start;">
-                        <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <span style="color: white; font-weight: 700; font-size: 20px;">2</span>
-                        </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="50" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <i class="fas fa-bolt" style="color: var(--primary); font-size: 24px;"></i>
                         <div>
-                            <h4 style="margin-bottom: 8px; font-size: 20px;">Preventivo dettagliato</h4>
-                            <p style="color: var(--gray-600); margin: 0;">Ricevi un preventivo chiaro, voce per voce, senza costi nascosti.</p>
+                            <strong style="font-size: 17px; color: var(--dark);">Impianto elettrico</strong>
+                            <p style="margin: 5px 0 0; color: var(--gray-600); font-size: 14px;">Rifacimento completo a norma</p>
                         </div>
                     </div>
-                    <div class="step-item" data-aos="fade-up" data-aos-delay="200" style="display: flex; gap: 25px; margin-bottom: 30px; align-items: flex-start;">
-                        <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <span style="color: white; font-weight: 700; font-size: 20px;">3</span>
-                        </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="100" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <i class="fas fa-faucet" style="color: var(--primary); font-size: 24px;"></i>
                         <div>
-                            <h4 style="margin-bottom: 8px; font-size: 20px;">Esecuzione coordinata</h4>
-                            <p style="color: var(--gray-600); margin: 0;">Gestiamo tutte le maestranze con un unico referente sempre disponibile.</p>
+                            <strong style="font-size: 17px; color: var(--dark);">Impianto idraulico</strong>
+                            <p style="margin: 5px 0 0; color: var(--gray-600); font-size: 14px;">Tubazioni e sanitari nuovi</p>
                         </div>
                     </div>
-                    <div class="step-item" data-aos="fade-up" data-aos-delay="300" style="display: flex; gap: 25px; align-items: flex-start;">
-                        <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <span style="color: white; font-weight: 700; font-size: 20px;">4</span>
-                        </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="150" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <i class="fas fa-th-large" style="color: var(--primary); font-size: 24px;"></i>
                         <div>
-                            <h4 style="margin-bottom: 8px; font-size: 20px;">Consegna chiavi in mano</h4>
-                            <p style="color: var(--gray-600); margin: 0;">Ti consegniamo l'immobile ristrutturato, pulito e pronto per essere utilizzato.</p>
+                            <strong style="font-size: 17px; color: var(--dark);">Pavimenti e rivestimenti</strong>
+                            <p style="margin: 5px 0 0; color: var(--gray-600); font-size: 14px;">Piastrelle, parquet, gres porcellanato</p>
+                        </div>
+                    </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <i class="fas fa-paint-roller" style="color: var(--primary); font-size: 24px;"></i>
+                        <div>
+                            <strong style="font-size: 17px; color: var(--dark);">Pittura decorativa</strong>
+                            <p style="margin: 5px 0 0; color: var(--gray-600); font-size: 14px;">Mattoncini, stucco veneziano, effetto pietra</p>
+                        </div>
+                    </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="250" style="display: flex; align-items: center; gap: 15px; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <i class="fas fa-couch" style="color: var(--primary); font-size: 24px;"></i>
+                        <div>
+                            <strong style="font-size: 17px; color: var(--dark);">Mobili su misura</strong>
+                            <p style="margin: 5px 0 0; color: var(--gray-600); font-size: 14px;">Arredamento integrato in legno</p>
                         </div>
                     </div>
                 </div>
@@ -233,13 +320,13 @@
         </section>
 
         <!-- Zone Servite -->
-        <section class="zones-section" style="padding: 80px 0;">
+        <section class="zones-section" style="padding: 80px 0; background: var(--gray-100);">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <h2 class="section-title">Dove <span class="highlight">operiamo</span></h2>
                 </div>
                 <div class="zones-content" style="max-width: 700px; margin: 40px auto 0; text-align: center;" data-aos="fade-up">
-                    <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700);">Operiamo a <strong>Roma e provincia</strong>: Prati, Trastevere, EUR, Parioli, Flaminio, Monteverde, San Giovanni, Ostia, Fiumicino, Ciampino, Guidonia, Tivoli, Frascati e zone limitrofe.</p>
+                    <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700);">Ristrutturiamo <strong>appartamenti e locali commerciali</strong> in centro e periferia: dal centro storico ai quartieri in espansione come Tiburtina, Tuscolana, San Giovanni. Lavoriamo anche nei comuni limitrofi: Guidonia, Tivoli, Frascati e Ciampino.</p>
                 </div>
             </div>
         </section>
@@ -286,18 +373,50 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+
+        // Hamburger menu
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
         hamburger?.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
+
+        // Navbar scroll
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) { navbar.classList.add('scrolled'); }
             else { navbar.classList.remove('scrolled'); }
+        });
+
+        // Initialize Swiper carousel
+        const gallerySwiper = new Swiper('.gallery-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
         });
     </script>
 </body>
