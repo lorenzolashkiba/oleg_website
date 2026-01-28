@@ -2915,6 +2915,11 @@ h4 { font-size: 1.25rem; }
 }
 
 /* FAQ Local */
+.faq-section {
+    padding: 80px 0;
+    background: var(--gray-100);
+}
+
 .faq-list {
     max-width: 800px;
     margin: 50px auto 0;
