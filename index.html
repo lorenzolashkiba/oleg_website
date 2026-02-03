@@ -10,29 +10,37 @@
 
     gtag('config', 'AW-16767084786');
     </script>
+    <!-- Event snippet for Contatto conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16767084786/Etg6CMDfxeYZEPLRlbs-',
+            'event_callback': callback
+        });
+        return false;
+    }
+    </script>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         var form = document.getElementById('contact-form');
         if (!form) return;
 
         form.addEventListener('submit', function (event) {
-            if (typeof gtag !== 'function') return;
+            if (typeof gtag !== 'function' || typeof gtag_report_conversion !== 'function') {
+                return;
+            }
 
             event.preventDefault();
+            gtag_report_conversion();
 
-            var submitted = false;
-            var submitForm = function () {
-                if (submitted) return;
-                submitted = true;
+            setTimeout(function () {
                 form.submit();
-            };
-
-            gtag('event', 'conversion', {
-                'send_to': 'AW-16767084786/Etg6CMDfxeYZEPLRlbs-',
-                'event_callback': submitForm
-            });
-
-            setTimeout(submitForm, 2000);
+            }, 2000);
         });
     });
     </script>
