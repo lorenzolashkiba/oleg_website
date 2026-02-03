@@ -10,6 +10,32 @@
 
     gtag('config', 'AW-16767084786');
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('contact-form');
+        if (!form) return;
+
+        form.addEventListener('submit', function (event) {
+            if (typeof gtag !== 'function') return;
+
+            event.preventDefault();
+
+            var submitted = false;
+            var submitForm = function () {
+                if (submitted) return;
+                submitted = true;
+                form.submit();
+            };
+
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16767084786/Etg6CMDfxeYZEPLRlbs-',
+                'event_callback': submitForm
+            });
+
+            setTimeout(submitForm, 2000);
+        });
+    });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
