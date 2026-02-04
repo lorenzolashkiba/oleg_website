@@ -25,25 +25,6 @@
         return false;
     }
     </script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var form = document.getElementById('contact-form');
-        if (!form) return;
-
-        form.addEventListener('submit', function (event) {
-            if (typeof gtag !== 'function' || typeof gtag_report_conversion !== 'function') {
-                return;
-            }
-
-            event.preventDefault();
-            gtag_report_conversion();
-
-            setTimeout(function () {
-                form.submit();
-            }, 2000);
-        });
-    });
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -1245,7 +1226,7 @@
                             <input type="checkbox" id="privacy" name="privacy" required>
                             <label for="privacy">Accetto il trattamento dei dati personali secondo la <a href="https://www.iubenda.com/privacy-policy/14816223" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Privacy Policy" target="_blank">Privacy Policy</a></label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">
+                        <button type="submit" class="btn btn-primary btn-block" onclick="return gtag_report_conversion();">
                             <span>Richiedi Preventivo Gratuito</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
