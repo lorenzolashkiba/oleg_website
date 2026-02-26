@@ -10,21 +10,6 @@
 
     gtag('config', 'AW-16767084786');
     </script>
-    <!-- Event snippet for Contatto conversion page -->
-    <script>
-    function gtag_report_conversion(url) {
-        var callback = function () {
-            if (typeof(url) != 'undefined') {
-                window.location = url;
-            }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16767084786/Etg6CMDfxeYZEPLRlbs-',
-            'event_callback': callback
-        });
-        return true;
-    }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -1226,7 +1211,7 @@
                             <input type="checkbox" id="privacy" name="privacy" required>
                             <label for="privacy">Accetto il trattamento dei dati personali secondo la <a href="https://www.iubenda.com/privacy-policy/14816223" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Privacy Policy" target="_blank">Privacy Policy</a></label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block" onclick="return gtag_report_conversion();">
+                        <button type="submit" class="btn btn-primary btn-block">
                             <span>Richiedi Preventivo Gratuito</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -1344,5 +1329,6 @@
     <link rel="dns-prefetch" href="//unpkg.com">
     <link rel="dns-prefetch" href="//images.unsplash.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <script src="js/tracking.js" defer></script>
 </body>
 </html>

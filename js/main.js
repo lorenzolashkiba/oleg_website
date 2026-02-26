@@ -511,7 +511,7 @@ function initContactForm() {
             errors.push('Inserisci un nome valido');
         }
 
-        if (!emailInput.value || !isValidEmail(emailInput.value)) {
+        if (emailInput.value && !isValidEmail(emailInput.value)) {
             errors.push('Inserisci un\'email valida');
         }
 
@@ -557,6 +557,14 @@ function initContactForm() {
         })
         .then(response => {
             if (response.ok) {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        send_to: 'AW-16767084786/Etg6CMDfxeYZEPLRlbs-'
+                    });
+                }
+                if (typeof window.logSiteConversion === 'function') {
+                    window.logSiteConversion('contact_form_submit');
+                }
                 showSuccessOverlay();
                 form.reset();
             } else {

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Statistiche - Legno Romano</title>
+    <style>
+        :root {
+            --bg: #f4f6f8;
+            --card: #ffffff;
+            --text: #1b2430;
+            --muted: #667085;
+            --accent: #0f766e;
+            --border: #e4e7ec;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(180deg, #eef8f6 0%, var(--bg) 100%);
+            color: var(--text);
+        }
+
+        .wrap {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 32px 16px 56px;
+        }
+
+        .panel {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 28px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 10px;
+            margin: 18px 0 0;
+        }
+
+        input, select, button {
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            padding: 10px 12px;
+            font-size: 15px;
+        }
+
+        button {
+            background: var(--accent);
+            color: white;
+            cursor: pointer;
+            border: 0;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .stat {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat .label {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .stat .value {
+            margin-top: 6px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .list-card {
+            margin-top: 14px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: #fff;
+            padding: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px 6px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        @media (max-width: 860px) {
+            .controls {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="panel">
+            <h1>Dashboard Statistiche</h1>
+            <p class="muted">Mostra visite e conversioni aggregate registrate dal sito.</p>
+
+            <div class="controls">
+                <input id="dashboard-key" type="password" placeholder="Chiave dashboard (ANALYTICS_DASHBOARD_KEY)">
+                <select id="days">
+                    <option value="7">Ultimi 7 giorni</option>
+                    <option value="30" selected>Ultimi 30 giorni</option>
+                    <option value="90">Ultimi 90 giorni</option>
+                </select>
+                <button id="load-btn" type="button">Carica</button>
+            </div>
+
+            <p id="status" class="muted"></p>
+
+            <div class="stats">
+                <div class="stat"><div class="label">Visite Totali</div><div id="v-total" class="value">-</div></div>
+                <div class="stat"><div class="label">Visite Finestra</div><div id="v-window" class="value">-</div></div>
+                <div class="stat"><div class="label">Conversioni Totali</div><div id="c-total" class="value">-</div></div>
+                <div class="stat"><div class="label">Tasso Conversione</div><div id="rate" class="value">-</div></div>
+            </div>
+
+            <div class="list-card">
+                <h3>Top Pagine</h3>
+                <table>
+                    <thead><tr><th>Percorso</th><th>Visite</th></tr></thead>
+                    <tbody id="pages-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const els = {
+            key: document.getElementById('dashboard-key'),
+            days: document.getElementById('days'),
+            loadBtn: document.getElementById('load-btn'),
+            status: document.getElementById('status'),
+            vTotal: document.getElementById('v-total'),
+            vWindow: document.getElementById('v-window'),
+            cTotal: document.getElementById('c-total'),
+            rate: document.getElementById('rate'),
+            pagesTable: document.getElementById('pages-table')
+        };
+
+        function setStatus(text) {
+            els.status.textContent = text || '';
+        }
+
+        function setNumber(el, value) {
+            el.textContent = Number(value || 0).toLocaleString('it-IT');
+        }
+
+        async function loadData() {
+            setStatus('Caricamento...');
+            els.pagesTable.innerHTML = '';
+
+            try {
+                const res = await fetch(`/.netlify/functions/analytics-summary?days=${encodeURIComponent(els.days.value)}`, {
+                    headers: {
+                        'X-Analytics-Key': els.key.value.trim()
+                    }
+                });
+
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || 'Errore nel caricamento dati');
+
+                setNumber(els.vTotal, data.visits.total_visits);
+                setNumber(els.vWindow, data.visits.last_days_visits);
+                setNumber(els.cTotal, data.conversions.total_conversions);
+                els.rate.textContent = `${data.conversion_rate_percent}%`;
+
+                (data.visits.top_pages || []).forEach((row) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${row.path}</td><td>${Number(row.views || 0).toLocaleString('it-IT')}</td>`;
+                    els.pagesTable.appendChild(tr);
+                });
+
+                setStatus(`Aggiornato: ${new Date(data.generated_at).toLocaleString('it-IT')}`);
+            } catch (error) {
+                setStatus(error.message);
+            }
+        }
+
+        els.loadBtn.addEventListener('click', loadData);
+    </script>
+</body>
+</html>

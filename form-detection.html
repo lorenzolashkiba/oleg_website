@@ -33,5 +33,23 @@
         <textarea name="message"></textarea>
         <input name="privacy" type="checkbox">
     </form>
+
+    <form name="visit_log" netlify hidden>
+        <input type="hidden" name="form-name" value="visit_log">
+        <input name="path">
+        <input name="referrer">
+        <input name="session_id">
+        <input name="device">
+        <input name="page_title">
+    </form>
+
+    <form name="conversion_log" netlify hidden>
+        <input type="hidden" name="form-name" value="conversion_log">
+        <input name="type">
+        <input name="path">
+        <input name="referrer">
+        <input name="session_id">
+        <input name="device">
+    </form>
 </body>
 </html>
