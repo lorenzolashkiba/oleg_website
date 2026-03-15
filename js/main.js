@@ -1,5 +1,5 @@
 /* ============================================
-   IGOR RISTRUTTURAZIONI - Main JavaScript
+   LEGNO ROMANO - Main JavaScript
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -154,7 +154,13 @@ function initCounterAnimation() {
 
     function animateCounters() {
         counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-count'));
+            const target = parseInt(counter.getAttribute('data-count'), 10);
+            const suffix = counter.getAttribute('data-suffix') || '';
+
+            if (!Number.isFinite(target)) {
+                return;
+            }
+
             const duration = 2000;
             const step = target / (duration / 16);
             let current = 0;
@@ -162,14 +168,10 @@ function initCounterAnimation() {
             const updateCounter = () => {
                 current += step;
                 if (current < target) {
-                    counter.textContent = Math.floor(current);
+                    counter.textContent = Math.floor(current) + suffix;
                     requestAnimationFrame(updateCounter);
                 } else {
-                    counter.textContent = target;
-                    // Add + or % suffix if needed
-                    if (target === 500) counter.textContent = target + '+';
-                    if (target === 100) counter.textContent = target + '%';
-                    if (target === 15) counter.textContent = target + '+';
+                    counter.textContent = target + suffix;
                 }
             };
 
@@ -501,6 +503,7 @@ function initContactForm() {
         const nameInput = form.querySelector('#name');
         const emailInput = form.querySelector('#email');
         const phoneInput = form.querySelector('#phone');
+        const zoneInput = form.querySelector('#zone');
         const messageInput = form.querySelector('#message');
         const privacyCheckbox = form.querySelector('#privacy');
 
@@ -545,6 +548,7 @@ function initContactForm() {
         formData.append('email', emailInput.value);
         formData.append('phone', phoneInput.value);
         formData.append('service', form.querySelector('#service').value);
+        formData.append('zone', zoneInput ? zoneInput.value : '');
         formData.append('message', messageInput.value);
 
         // Submit to Formspree (GRATUITO - 50 invii/mese)
@@ -625,7 +629,7 @@ function initContactForm() {
                     <i class="fas fa-check-circle"></i>
                 </div>
                 <h2>Preventivo Inviato!</h2>
-                <p>Grazie per averci contattato.<br>Ti risponderemo entro 24 ore.</p>
+                <p>Grazie per averci contattato.<br>Ti risponderemo il prima possibile.</p>
                 <button class="btn btn-primary" onclick="document.getElementById('success-overlay').remove()">
                     <span>Chiudi</span>
                 </button>
