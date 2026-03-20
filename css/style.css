@@ -350,13 +350,24 @@ h4 { font-size: 1.25rem; }
     padding: 15px 0;
 }
 
+.navbar.navbar-solid {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-md);
+    padding: 15px 0;
+}
+
 .navbar.scrolled .logo-text,
-.navbar.scrolled .nav-link {
+.navbar.scrolled .nav-link,
+.navbar.navbar-solid .logo-text,
+.navbar.navbar-solid .nav-link {
     color: var(--dark);
 }
 
 .navbar.scrolled .nav-link:hover,
-.navbar.scrolled .nav-link.active {
+.navbar.scrolled .nav-link.active,
+.navbar.navbar-solid .nav-link:hover,
+.navbar.navbar-solid .nav-link.active {
     color: var(--primary);
 }
 
@@ -470,6 +481,10 @@ h4 { font-size: 1.25rem; }
 }
 
 .navbar.scrolled .hamburger span {
+    background: var(--dark);
+}
+
+.navbar.navbar-solid .hamburger span {
     background: var(--dark);
 }
 
@@ -2906,6 +2921,30 @@ h4 { font-size: 1.25rem; }
 
 .zones-section .section-description {
     color: rgba(255,255,255,0.8);
+}
+
+.zones-section-light {
+    background: var(--gray-100);
+    color: var(--dark);
+}
+
+.zones-section-light .section-subtitle {
+    color: var(--primary);
+}
+
+.zones-section-light .section-title {
+    color: var(--dark);
+}
+
+.zones-section-light .section-description,
+.zones-section-light .zones-extra p,
+.zones-section-light .zone-card p,
+.zones-section-light .zones-content p {
+    color: var(--gray-700);
+}
+
+.zones-section-light .zones-extra {
+    background: rgba(0,0,0,0.03);
 }
 
 /* Zone Operative Mobile */

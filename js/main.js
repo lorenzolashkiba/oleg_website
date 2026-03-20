@@ -780,28 +780,34 @@ function throttle(func, limit = 100) {
 /* ============================================
    Image Lazy Loading Enhancement
    ============================================ */
-if ('loading' in HTMLImageElement.prototype) {
-    // Native lazy loading supported
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-        img.src = img.dataset.src || img.src;
-    });
-} else {
-    // Fallback for older browsers
-    const lazyImages = document.querySelectorAll('img[data-src]');
-
-    const lazyLoad = function() {
-        lazyImages.forEach(img => {
-            if (img.getBoundingClientRect().top < window.innerHeight + 100) {
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', throttle(lazyLoad, 200));
-    window.addEventListener('resize', throttle(lazyLoad, 200));
-    lazyLoad();
+function loadDeferredImage(img) {
+    if (!img || !img.dataset.src) return;
+    img.src = img.dataset.src;
+    img.removeAttribute('data-src');
 }
+
+(function initDeferredImages() {
+    const deferredImages = document.querySelectorAll('img[data-src]');
+
+    if (deferredImages.length === 0) return;
+
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                loadDeferredImage(entry.target);
+                observer.unobserve(entry.target);
+            });
+        }, {
+            rootMargin: '300px 0px'
+        });
+
+        deferredImages.forEach(img => imageObserver.observe(img));
+        return;
+    }
+
+    deferredImages.forEach(loadDeferredImage);
+})();
 
 /* ============================================
    Parallax Effect for Hero (Optional)

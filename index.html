@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16767084786"></script>
+    <!-- Google tag e widget privacy caricati fuori dal percorso critico -->
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function() {
+        function loadExternalScript(src, attributes) {
+            var script = document.createElement('script');
+            script.src = src;
+            Object.entries(attributes || {}).forEach(function(entry) {
+                script.setAttribute(entry[0], entry[1]);
+            });
+            document.head.appendChild(script);
+        }
 
-    gtag('config', 'AW-16767084786');
+        function scheduleDeferredScripts() {
+            var idle = window.requestIdleCallback || function(callback) {
+                return setTimeout(callback, 1);
+            };
+
+            idle(function() {
+                loadExternalScript('https://www.googletagmanager.com/gtag/js?id=AW-16767084786', { async: '' });
+                gtag('js', new Date());
+                gtag('config', 'AW-16767084786');
+                loadExternalScript('https://embeds.iubenda.com/widgets/9ad80b30-e9c6-4477-b1f3-4285f80841c4.js', { type: 'text/javascript' });
+            });
+        }
+
+        window.addEventListener('load', scheduleDeferredScripts, { once: true });
+    })();
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,8 +47,6 @@
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-    <!-- iubenda privacy policy -->
-    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/9ad80b30-e9c6-4477-b1f3-4285f80841c4.js"></script>
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://falegnameriaroma.netlify.app/">
@@ -494,10 +513,10 @@
             <div class="about-grid">
                 <div class="about-images" data-aos="fade-right" data-aos-duration="1000">
                     <div class="about-img-main">
-                        <img src="images/work/1.webp" alt="Il team Legno Romano al lavoro - Falegnameria Roma" width="600" height="400" loading="eager">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/1.webp" alt="Il team Legno Romano al lavoro - Falegnameria Roma" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
                     </div>
                     <div class="about-img-secondary">
-                        <img src="images/work/2.webp" alt="Lavori di falegnameria Legno Romano" width="300" height="200" loading="lazy">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/2.webp" alt="Lavori di falegnameria Legno Romano" width="300" height="200" loading="lazy" decoding="async" fetchpriority="low">
                     </div>
                     <div class="experience-badge">
                         <span class="exp-number">15+</span>
@@ -662,7 +681,7 @@
                     <!-- Slide 1 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/3.webp" alt="Libreria in legno massello su misura" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/3.webp" alt="Libreria in legno massello su misura" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Falegnameria</span>
                                 <h4>Progetto su misura</h4>
@@ -674,7 +693,7 @@
                     <!-- Slide 2 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/4.webp" alt="Tavolo artigianale in legno massello" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/4.webp" alt="Tavolo artigianale in legno massello" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Artigianato</span>
                                 <h4>Realizzazione artigianale</h4>
@@ -686,7 +705,7 @@
                     <!-- Slide 3 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/5.webp" alt="Mobile su misura in legno massello" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/5.webp" alt="Mobile su misura in legno massello" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Mobili</span>
                                 <h4>Mobile su misura</h4>
@@ -698,7 +717,7 @@
                     <!-- Slide 4 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/6.webp" alt="Lavorazione artigianale del legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/6.webp" alt="Lavorazione artigianale del legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Legno</span>
                                 <h4>Lavorazione legno</h4>
@@ -710,7 +729,7 @@
                     <!-- Slide 5 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/7.webp" alt="Arredamento su misura in legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/7.webp" alt="Arredamento su misura in legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Interni</span>
                                 <h4>Arredamento su misura</h4>
@@ -722,7 +741,7 @@
                     <!-- Slide 6 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/8.webp" alt="Mobile in legno artigianale" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/8.webp" alt="Mobile in legno artigianale" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Falegnameria</span>
                                 <h4>Creazione artigianale</h4>
@@ -734,7 +753,7 @@
                     <!-- Slide 7 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/9.webp" alt="Progetto personalizzato in legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/9.webp" alt="Progetto personalizzato in legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Su Misura</span>
                                 <h4>Progetto personalizzato</h4>
@@ -746,7 +765,7 @@
                     <!-- Slide 8 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/10.webp" alt="Complemento d'arredo in legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/10.webp" alt="Complemento d'arredo in legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Arredamento</span>
                                 <h4>Complemento d'arredo</h4>
@@ -758,7 +777,7 @@
                     <!-- Slide 9 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/12.webp" alt="Tavolino design con incastri in legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/12.webp" alt="Tavolino design con incastri in legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Design</span>
                                 <h4>Tavolino con incastri</h4>
@@ -770,7 +789,7 @@
                     <!-- Slide 10 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/15.webp" alt="Seduta in legno con libreria integrata" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/15.webp" alt="Seduta in legno con libreria integrata" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Falegnameria</span>
                                 <h4>Seduta con libreria</h4>
@@ -782,7 +801,7 @@
                     <!-- Slide 11 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/16.webp" alt="Libreria su misura in legno massello" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/16.webp" alt="Libreria su misura in legno massello" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Mobili</span>
                                 <h4>Libreria su misura</h4>
@@ -794,7 +813,7 @@
                     <!-- Slide 12 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/18.webp" alt="Mobile ingresso rustico in legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/18.webp" alt="Mobile ingresso rustico in legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Arredamento</span>
                                 <h4>Mobile ingresso rustico</h4>
@@ -806,7 +825,7 @@
                     <!-- Slide 13 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/19.webp" alt="Gazebo in legno per giardino" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/19.webp" alt="Gazebo in legno per giardino" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Esterni</span>
                                 <h4>Gazebo in legno</h4>
@@ -818,7 +837,7 @@
                     <!-- Slide 14 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/20.webp" alt="Tavolino rotondo artigianale in legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/20.webp" alt="Tavolino rotondo artigianale in legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Design</span>
                                 <h4>Tavolino rotondo</h4>
@@ -830,7 +849,7 @@
                     <!-- Slide 15 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/21.webp" alt="Ristrutturazione ingresso con legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/21.webp" alt="Ristrutturazione ingresso con legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Interni</span>
                                 <h4>Ristrutturazione ingresso</h4>
@@ -842,7 +861,7 @@
                     <!-- Slide 16 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/22.webp" alt="Struttura gazebo in legno massello" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/22.webp" alt="Struttura gazebo in legno massello" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Esterni</span>
                                 <h4>Gazebo con tetto</h4>
@@ -854,7 +873,7 @@
                     <!-- Slide 17 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/23.webp" alt="Gazebo decorativo con copertura in legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/23.webp" alt="Gazebo decorativo con copertura in legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Esterni</span>
                                 <h4>Gazebo con grigliato</h4>
@@ -866,7 +885,7 @@
                     <!-- Slide 18 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/24.webp" alt="Balaustra artigianale in legno massello" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/24.webp" alt="Balaustra artigianale in legno massello" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Falegnameria</span>
                                 <h4>Balaustra artigianale</h4>
@@ -878,7 +897,7 @@
                     <!-- Slide 19 -->
                     <div class="portfolio-slide">
                         <div class="portfolio-image">
-                            <img src="images/work/25.webp" alt="Ringhiera traforata decorativa in legno" width="400" height="300" loading="lazy">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="images/work/25.webp" alt="Ringhiera traforata decorativa in legno" width="400" height="300" loading="lazy" decoding="async" fetchpriority="low">
                             <div class="portfolio-overlay">
                                 <span class="portfolio-category">Falegnameria</span>
                                 <h4>Ringhiera traforata</h4>
