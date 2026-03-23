@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://falegnameriaroma.netlify.app/</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -41,9 +41,17 @@
   <!-- Pergole e Gazebo -->
   <url>
     <loc>https://falegnameriaroma.netlify.app/servizi/pergole-gazebo.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+
+  <!-- Tettoie in Legno -->
+  <url>
+    <loc>https://falegnameriaroma.netlify.app/servizi/tettoie-in-legno.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
   </url>
 
   <!-- Corrimano e Scale -->

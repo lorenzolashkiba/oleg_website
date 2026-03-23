@@ -14,34 +14,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>Pergole in Legno Roma Nord, Bracciano e Trevignano | Legno Romano</title>
-    <meta name="description" content="Pergole in legno su misura a Roma nord, Bracciano e Trevignano Romano. Realizziamo pergole, gazebo e tettoie artigianali per giardini e terrazzi con sopralluogo gratuito.">
+    <title>Pergola in Legno Roma Nord, Bracciano, Trevignano e Monterotondo | Legno Romano</title>
+    <meta name="description" content="Pergola in legno su misura a Roma nord, Bracciano, Trevignano Romano e Monterotondo. Realizziamo anche gazebo, tettoie e coperture per giardini e terrazzi.">
     <meta name="author" content="Legno Romano">
     <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IT-RM">
+    <meta name="geo.placename" content="Roma">
+    <meta name="theme-color" content="#654321">
     <link rel="canonical" href="https://falegnameriaroma.netlify.app/servizi/pergole-gazebo.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://falegnameriaroma.netlify.app/servizi/pergole-gazebo.html">
-    <meta property="og:title" content="Pergole in Legno Roma Nord, Bracciano e Trevignano | Legno Romano">
-    <meta property="og:description" content="Pergole in legno su misura a Roma nord, Bracciano e Trevignano Romano con progettazione personalizzata e installazione completa.">
+    <meta property="og:title" content="Pergola in Legno Roma Nord, Bracciano, Trevignano e Monterotondo | Legno Romano">
+    <meta property="og:description" content="Pergola in legno, gazebo e tettoie su misura per giardini e terrazzi a Roma nord e provincia con progettazione personalizzata.">
     <meta property="og:image" content="https://falegnameriaroma.netlify.app/images/work/hero.webp">
+    <meta property="og:image:alt" content="Pergola artigianale in legno realizzata da Legno Romano">
     <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Legno Romano">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pergola in Legno Roma Nord, Bracciano, Trevignano e Monterotondo | Legno Romano">
+    <meta name="twitter:description" content="Pergola in legno, gazebo e tettoie su misura per giardini e terrazzi a Roma nord, Bracciano, Trevignano Romano e Monterotondo.">
+    <meta name="twitter:image" content="https://falegnameriaroma.netlify.app/images/work/hero.webp">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon.svg">
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../css/style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
     <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></noscript>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
@@ -51,27 +69,82 @@
     {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Pergole in Legno a Roma Nord, Bracciano e Trevignano",
-        "serviceType": "Pergole, gazebo e tettoie in legno su misura",
+        "@id": "https://falegnameriaroma.netlify.app/servizi/pergole-gazebo.html#service",
+        "name": "Pergola in Legno a Roma Nord, Bracciano, Trevignano e Monterotondo",
+        "serviceType": "Pergole, gazebo, tettoie e coperture in legno su misura",
         "url": "https://falegnameriaroma.netlify.app/servizi/pergole-gazebo.html",
         "provider": {
             "@type": "HomeAndConstructionBusiness",
+            "@id": "https://falegnameriaroma.netlify.app/#business",
             "name": "Legno Romano",
             "telephone": "+39 327 909 8234",
             "email": "Lozaoleg63@gmail.com"
         },
         "areaServed": [
-            "Roma",
-            "Roma Nord",
-            "Cassia",
-            "Olgiata",
-            "Bracciano",
-            "Trevignano Romano",
-            "Anguillara Sabazia",
-            "Fiumicino",
-            "Ciampino"
+            { "@type": "City", "name": "Roma" },
+            { "@type": "Place", "name": "Roma Nord" },
+            { "@type": "Place", "name": "Cassia" },
+            { "@type": "Place", "name": "Olgiata" },
+            { "@type": "City", "name": "Bracciano" },
+            { "@type": "City", "name": "Trevignano Romano" },
+            { "@type": "City", "name": "Monterotondo" },
+            { "@type": "City", "name": "Anguillara Sabazia" },
+            { "@type": "City", "name": "Mentana" },
+            { "@type": "City", "name": "Fonte Nuova" }
         ],
-        "description": "Pergole in legno, gazebo e tettoie artigianali su misura a Roma nord, Bracciano e Trevignano Romano con progettazione personalizzata e installazione completa."
+        "description": "Pergola in legno, gazebo e tettoie artigianali su misura a Roma nord, Bracciano, Trevignano Romano e Monterotondo con progettazione personalizzata e installazione completa.",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Strutture esterne in legno",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Pergole addossate in legno"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Pergole autoportanti in legno"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Gazebo in legno su misura"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Tettoie e coperture in legno"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://falegnameriaroma.netlify.app/servizi/pergole-gazebo.html#webpage",
+        "url": "https://falegnameriaroma.netlify.app/servizi/pergole-gazebo.html",
+        "name": "Pergola in Legno Roma Nord, Bracciano, Trevignano e Monterotondo",
+        "description": "Landing dedicata a pergola in legno, gazebo e tettoie su misura per giardini e terrazzi a Roma nord e provincia.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://falegnameriaroma.netlify.app/"
+        },
+        "about": {
+            "@id": "https://falegnameriaroma.netlify.app/servizi/pergole-gazebo.html#service"
+        },
+        "primaryImageOfPage": "https://falegnameriaroma.netlify.app/images/work/hero.webp"
     }
     </script>
     <script type="application/ld+json">
@@ -101,6 +174,22 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Utilizziamo legni adatti all'esterno come pino impregnato, larice e castagno, scelti in base all'esposizione e al progetto."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Lavorate anche a Monterotondo e nei comuni vicini?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Si, realizziamo pergole in legno anche a Monterotondo, Mentana, Fonte Nuova e nelle aree residenziali limitrofe con sopralluogo e installazione su misura."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo serve per realizzare una pergola su misura?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dipende da dimensioni, materiali e copertura scelta. Dopo il sopralluogo definiamo tempi realistici di progettazione, realizzazione e montaggio."
                 }
             },
             {
@@ -136,6 +225,8 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
+
     <!-- Navigation -->
     <nav class="navbar navbar-solid">
         <div class="nav-container">
@@ -167,12 +258,17 @@
     <section class="page-hero">
         <div class="container">
             <div class="page-hero-content" data-aos="fade-up">
-                <h1>Pergole in Legno <span class="gradient-text">Roma Nord e Provincia</span></h1>
-                <p class="hero-description">Progettiamo e realizziamo pergole, gazebo e strutture esterne in legno su misura per giardini e terrazzi a Roma nord, Bracciano, Trevignano Romano e comuni vicini. Qualita artigianale, legni selezionati e installazione completa.</p>
+                <p style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.14); color: white; font-weight: 600; letter-spacing: 0.02em;">Sopralluogo gratuito a Roma nord e provincia</p>
+                <h1>Pergola in Legno <span class="gradient-text">Roma Nord, Bracciano e Trevignano</span></h1>
+                <p class="hero-description">Progettiamo e realizziamo pergola in legno, gazebo e strutture esterne su misura per giardini e terrazzi a Roma nord, Bracciano, Trevignano Romano, Monterotondo e comuni vicini. Qualita artigianale, legni selezionati e installazione completa.</p>
                 <div class="hero-buttons">
                     <a href="../index.html#contatti" class="btn btn-primary">
                         <span>Richiedi un preventivo gratuito</span>
                         <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="tel:+393279098234" class="btn btn-secondary">
+                        <span>Chiama ora</span>
+                        <i class="fas fa-phone"></i>
                     </a>
                     <a href="#zone-pergole" class="btn btn-secondary">
                         <span>Dove operiamo</span>
@@ -187,18 +283,41 @@
         <section class="intro-section" style="padding: 80px 0;">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Pergole in legno per <span class="highlight">Roma nord e lago di Bracciano</span></h2>
+                    <h2 class="section-title">Pergola in legno su misura per <span class="highlight">giardini, terrazzi e villette</span></h2>
                 </div>
                 <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-top: 40px;">
                     <div class="intro-content" style="flex: 1; min-width: 300px;" data-aos="fade-up">
-                        <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700); margin-bottom: 20px;">Le pergole e i gazebo in legno trasformano il tuo giardino o terrazzo in un ambiente accogliente e funzionale. Legno Romano realizza strutture esterne su misura perfette per creare zone ombra, aree relax o spazi per pranzi all'aperto in ville, terrazzi e case indipendenti.</p>
-                        <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700); margin-bottom: 20px;">Questa pagina e ottimizzata per chi cerca <strong>pergole in legno a Roma nord</strong>, <strong>pergole in legno a Bracciano</strong> o <strong>pergole in legno a Trevignano Romano</strong>, localita in cui Google ha gia iniziato a mostrare il sito e che per noi hanno un forte potenziale commerciale.</p>
-                        <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700);">Utilizziamo legni resistenti agli agenti atmosferici come pino impregnato, larice e castagno, trattati per garantire durabilita e bellezza nel tempo.</p>
+                        <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700); margin-bottom: 20px;">Una pergola in legno ben progettata trasforma il giardino o il terrazzo in uno spazio accogliente e funzionale. Legno Romano realizza strutture esterne su misura perfette per creare zone ombra, aree relax o spazi per pranzi all'aperto in ville, terrazzi e case indipendenti.</p>
+                        <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700); margin-bottom: 20px;">Seguiamo spesso richieste per <strong>pergola in legno a Roma nord</strong>, <strong>Bracciano</strong>, <strong>Trevignano Romano</strong> e <strong>Monterotondo</strong>, zone dove terrazzi, giardini e porticati richiedono soluzioni resistenti, proporzionate allo spazio e curate dal punto di vista estetico.</p>
+                        <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700);">Utilizziamo legni resistenti agli agenti atmosferici come pino impregnato, larice e castagno, trattati per garantire durabilita e bellezza nel tempo. Su richiesta realizziamo anche gazebo, tettoie e coperture in legno coordinate con arredi esterni e complementi su misura. Se ti interessa in particolare una copertura fissa, trovi anche la pagina dedicata alle <a href="tettoie-in-legno.html"><strong>tettoie in legno a Roma</strong></a>.</p>
                     </div>
                     <div style="flex: 0 0 auto; max-width: 300px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
-                        <video autoplay muted loop playsinline style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                        <video autoplay muted loop playsinline poster="../images/work/13.webp" style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
                             <source src="../images/gazebo.mp4" type="video/mp4">
                         </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 0 0 80px;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+                    <div data-aos="fade-up" style="background: var(--gray-100); border-radius: 14px; padding: 22px;">
+                        <h3 style="margin-bottom: 10px; font-size: 20px;">Pergole addossate</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.7;">Ideali per terrazzi e pareti esistenti, con coperture in legno, telo o policarbonato.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100" style="background: var(--gray-100); border-radius: 14px; padding: 22px;">
+                        <h3 style="margin-bottom: 10px; font-size: 20px;">Pergole autoportanti</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.7;">Perfette per giardini, aree piscina e spazi relax indipendenti dalla casa.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200" style="background: var(--gray-100); border-radius: 14px; padding: 22px;">
+                        <h3 style="margin-bottom: 10px; font-size: 20px;">Gazebo in legno</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.7;">Soluzioni decorative e funzionali per creare una zona riparata e vivibile all'aperto.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300" style="background: var(--gray-100); border-radius: 14px; padding: 22px;">
+                        <h3 style="margin-bottom: 10px; font-size: 20px;">Tettoie e coperture</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.7;">Coperture in legno per ingressi, posti auto, porticati e spazi di servizio esterni.</p>
                     </div>
                 </div>
             </div>
@@ -274,8 +393,8 @@
         <section id="zone-pergole" class="zones-section zones-section-light" style="padding: 80px 0;">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2 class="section-title">Pergole in legno a <span class="highlight">Roma nord, Bracciano e Trevignano</span></h2>
-                    <p style="max-width: 900px; margin: 12px auto 0; color: var(--gray-700); line-height: 1.8;">Ci concentriamo sulle zone dove la richiesta per pergole e gazebo e piu alta: quartieri con villette e terrazzi a Roma nord, aree residenziali intorno alla Cassia e abitazioni con spazi esterni nei comuni del lago.</p>
+                    <h2 class="section-title">Pergola in legno a <span class="highlight">Roma nord, Bracciano, Trevignano e Monterotondo</span></h2>
+                    <p style="max-width: 900px; margin: 12px auto 0; color: var(--gray-700); line-height: 1.8;">Ci concentriamo sulle zone dove la richiesta per pergola in legno e gazebo e piu alta: quartieri con villette e terrazzi a Roma nord, aree residenziali intorno alla Cassia, i comuni del lago e la fascia residenziale di Monterotondo e dintorni.</p>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 40px;">
                     <div data-aos="fade-up" style="background: white; border-radius: 14px; padding: 28px;">
@@ -290,8 +409,39 @@
                         <h3 style="margin-bottom: 12px;">Trevignano Romano</h3>
                         <p style="color: var(--gray-700); line-height: 1.8;">A Trevignano Romano lavoriamo su pergole, gazebo e coperture per terrazzi e giardini con progettazione personalizzata in base allo spazio e all'esposizione.</p>
                     </div>
+                    <div data-aos="fade-up" data-aos-delay="300" style="background: white; border-radius: 14px; padding: 28px;">
+                        <h3 style="margin-bottom: 12px;">Monterotondo</h3>
+                        <p style="color: var(--gray-700); line-height: 1.8;">A Monterotondo e nei comuni vicini realizziamo pergole in legno per villette, attici e spazi esterni con sopralluogo, studio degli ancoraggi e finiture per esterno.</p>
+                    </div>
                 </div>
                 <p style="max-width: 900px; margin: 28px auto 0; text-align: center; color: var(--gray-700); line-height: 1.8;">Se oltre alla struttura esterna ti serve anche un <a href="../index.html"><strong>falegname a Roma</strong></a> per arredi coordinati, corrimano o altri lavori in legno, puoi partire dalla nostra home o dalla pagina dedicata alla <a href="falegnameria-su-misura.html"><strong>falegnameria su misura</strong></a>.</p>
+            </div>
+        </section>
+
+        <section style="padding: 80px 0; background: var(--gray-100);">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Cosa valutiamo prima del <span class="highlight">preventivo</span></h2>
+                    <p style="max-width: 880px; margin: 12px auto 0; color: var(--gray-700); line-height: 1.8;">Una landing che converte deve rispondere anche ai dubbi pratici. Durante il sopralluogo definiamo misure, esposizione, copertura e vincoli tecnici, cosi il preventivo e piu preciso e il progetto parte senza sorprese.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 40px;">
+                    <div data-aos="fade-up" style="background: white; border-radius: 14px; padding: 24px;">
+                        <h3 style="margin-bottom: 10px; font-size: 20px;">Misure e ingombri</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.8;">Valutiamo larghezza, profondita, altezze utili e distanza da aperture, parapetti o confini.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100" style="background: white; border-radius: 14px; padding: 24px;">
+                        <h3 style="margin-bottom: 10px; font-size: 20px;">Esposizione e uso</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.8;">Capire sole, vento e frequenza d'uso aiuta a scegliere essenza, trattamento e copertura piu adatti.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200" style="background: white; border-radius: 14px; padding: 24px;">
+                        <h3 style="margin-bottom: 10px; font-size: 20px;">Ancoraggi e supporti</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.8;">Controlliamo muri, pavimentazioni e punti di fissaggio per proporre una struttura stabile e sicura.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300" style="background: white; border-radius: 14px; padding: 24px;">
+                        <h3 style="margin-bottom: 10px; font-size: 20px;">Aspetti pratici</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.8;">Se necessario ti segnaliamo anche quali verifiche fare su regolamento condominiale o disposizioni locali prima di procedere.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -349,7 +499,7 @@
                     <h2 class="section-title">Dove <span class="highlight">operiamo</span></h2>
                 </div>
                 <div class="zones-content" style="max-width: 700px; margin: 40px auto 0; text-align: center;" data-aos="fade-up">
-                    <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700);">Costruiamo strutture per <strong>giardini e terrazzi</strong> nelle zone con spazi esterni: Roma nord, Cassia, Olgiata, Bracciano, Trevignano Romano, Castelli Romani. Operiamo anche sul litorale da Ostia a Fiumicino e nelle zone collinari di Guidonia e Tivoli.</p>
+                    <p style="font-size: 18px; line-height: 1.8; color: var(--gray-700);">Costruiamo strutture per <strong>giardini e terrazzi</strong> nelle zone con spazi esterni: Roma nord, Cassia, Olgiata, Bracciano, Trevignano Romano, Monterotondo, Mentana, Fonte Nuova e Castelli Romani. Operiamo anche sul litorale da Ostia a Fiumicino e nelle zone collinari di Guidonia e Tivoli.</p>
                 </div>
             </div>
         </section>
@@ -374,6 +524,14 @@
                         <p style="margin: 0; color: var(--gray-700); line-height: 1.8;">Dipende da esposizione, budget e manutenzione desiderata. In molti casi proponiamo pino impregnato, larice o castagno per avere resistenza e una buona resa estetica.</p>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="300" style="background: var(--gray-100); border-radius: 12px; padding: 24px;">
+                        <h3 style="margin-bottom: 10px;">Lavorate anche a Monterotondo e nei comuni vicini?</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.8;">Si, realizziamo pergole in legno anche a Monterotondo, Mentana, Fonte Nuova e nelle aree residenziali limitrofe con sopralluogo e installazione su misura.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400" style="background: var(--gray-100); border-radius: 12px; padding: 24px;">
+                        <h3 style="margin-bottom: 10px;">Quanto tempo serve per realizzare una pergola su misura?</h3>
+                        <p style="margin: 0; color: var(--gray-700); line-height: 1.8;">Dipende da dimensioni, materiali e copertura scelta. Dopo il sopralluogo definiamo tempi realistici di progettazione, realizzazione e montaggio in base al lavoro.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="500" style="background: var(--gray-100); border-radius: 12px; padding: 24px;">
                         <h3 style="margin-bottom: 10px;">Fate un sopralluogo prima del preventivo?</h3>
                         <p style="margin: 0; color: var(--gray-700); line-height: 1.8;">Si, il sopralluogo ci serve per verificare misure, ancoraggi, coperture e fattibilita. In questo modo il preventivo e piu preciso e il progetto piu realistico.</p>
                     </div>
@@ -385,7 +543,7 @@
         <section class="cta-final" style="padding: 80px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); color: white;">
             <div class="container">
                 <div class="cta-content" style="max-width: 700px; margin: 0 auto; text-align: center;" data-aos="fade-up">
-                    <h2 style="font-size: 36px; margin-bottom: 20px;">Vuoi una pergola o un gazebo su misura?</h2>
+                    <h2 style="font-size: 36px; margin-bottom: 20px;">Vuoi una pergola, un gazebo o una copertura su misura?</h2>
                     <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Contattaci per un preventivo gratuito. Trasformiamo il tuo spazio esterno.</p>
                     <div class="cta-buttons" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
                         <a href="tel:+393279098234" class="btn" style="background: white; color: var(--primary); padding: 15px 30px; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
